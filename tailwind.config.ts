@@ -1,18 +1,108 @@
-import type { Config } from "tailwindcss";
-
-export default {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        bgColor: "#112240",
+        primaryColor: "#64FFDA",
+        textColor: "#8892B0",
+      },
+      animation: {
+        backgroundPositionSpin:
+          "background-position-spin 3000ms infinite alternate",
+      },
+      keyframes: {
+        "background-position-spin": {
+          "0%": { backgroundPosition: "top center" },
+          "100%": { backgroundPosition: "bottom center" },
+        },
       },
     },
+    screens: {
+      xsm: "350px",
+      xs: "476px",
+      sm: "640px",
+      md: "768px",
+      bs: "900px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+
+      "2xl-mx": { max: "1535px" },
+      "xl-mx": { max: "1279px" },
+      "lg-mx": { max: "1023px" },
+      "bs-mx": { max: "899px" },
+      "md-mx": { max: "767px" },
+      "sm-mx": { max: "639px" },
+      "xs-mx": { max: "475px" },
+      "xsm-mx": { max: "349px" },
+    },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        baseTheme: {
+          primary: "#64FFDA",
+          "primary-focus": "#52D1B4",
+          "primary-content": "#FFFFFF",
+
+          secondary: "#233554",
+          "secondary-focus": "#1B283E",
+          "secondary-content": "#FFFFFF",
+
+          accent: "#F57DFF",
+          "accent-focus": "#D769DA",
+          "accent-content": "#112240",
+
+          neutral: "#021225",
+          "neutral-focus": "#0A192F",
+          "neutral-content": "#FFFFFF",
+
+          "base-100": "#112240",
+          "base-200": "#0A192F",
+          "base-300": "#021225",
+          "base-content": "#8892B0",
+          "base-content-inverse": "#FFFFFF",
+          info: "#00C6FF",
+          success: "#64FFDA",
+          warning: "#FFD600",
+          error: "#FF5656",
+        },
+      },
+      "light",
+      "dark",
+      "cupcake",
+      "bumblebee",
+      "emerald",
+      "corporate",
+      "synthwave",
+      "retro",
+      "cyberpunk",
+      "valentine",
+      "halloween",
+      "garden",
+      "forest",
+      "aqua",
+      "lofi",
+      "pastel",
+      "fantasy",
+      "wireframe",
+      "black",
+      "luxury",
+      "dracula",
+      "cmyk",
+      "autumn",
+      "business",
+      "acid",
+      "lemonade",
+      "night",
+      "coffee",
+      "winter",
+      "dim",
+      "nord",
+      "sunset",
+    ],
+  },
+};
