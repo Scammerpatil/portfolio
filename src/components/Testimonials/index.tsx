@@ -36,16 +36,22 @@ const Testimonials = ({ testimonial }: { testimonial: Testimonial[] }) => {
       toast.promise(response, {
         loading: "Submitting review...",
         success: () => {
-          for (let key in formData) {
-            setFormData({ ...formData, [key]: "" });
-          }
+          setFormData({
+            name: "",
+            email: "",
+            github: "",
+            content: "",
+            designation: "friend",
+            image: "",
+            star: 0,
+          });
           (document.getElementById("newReview") as HTMLDialogElement).close();
           return "Review submitted successfully";
         },
         error: "Failed to submit review",
       });
-    } catch (error: any) {
-      toast.error("Failed to submit review", error.message);
+    } catch (error: unknown) {
+      toast.error("Failed to submit review", (error as any).toString());
     }
   };
 
@@ -54,7 +60,6 @@ const Testimonials = ({ testimonial }: { testimonial: Testimonial[] }) => {
       <SectionTitle
         title="Raving Reviews & Wild Compliments 🚀"
         paragraph="Hear the buzz from my amazing clients and collaborators! Spoiler: They love working with me (and you will too)."
-        center
       />
 
       <div className="w-full mx-auto">

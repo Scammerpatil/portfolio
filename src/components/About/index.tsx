@@ -5,6 +5,7 @@ import Particles from "./Particles";
 import { NeonGradientCard } from "./neon-gradient-card";
 import { useEffect, useState } from "react";
 import Color from "colorjs.io";
+import Image from "next/image";
 
 const About = () => {
   const [color, setColor] = useState<string>();
@@ -35,14 +36,14 @@ const About = () => {
     } catch (error) {
       console.error("Error initializing About component:", error);
     }
-  }, [theme]);
+  }, [theme, root]);
 
   return (
     <>
       <div
         data-aos="zoom-out-up"
         data-aos-duration="800"
-        className="bg-base-300 flex flex-col lg:flex-row relative overflow-hidden justify-center lg:justify-around items-center font-mono px-6 md:px-10 py-10 md:py-16 lg:py-20 min-h-screen gap-6 sm-mx:flex-col-reverse aos-init aos-animate"
+        className="bg-base-300 flex flex-col lg:flex-row relative overflow-hidden justify-center lg:justify-around items-center font-mono px-6 md:px-10 py-10 md:py-16 lg:py-32 min-h-screen gap-6 sm-mx:flex-col-reverse aos-init aos-animate"
         id="About"
       >
         <Particles
@@ -54,7 +55,7 @@ const About = () => {
           color={color}
           refresh
         />
-        <div className="bs:ml-10 bs:w-3/5 flex flex-col h-full  lg-mx:gap-3  bs-mx:items-center">
+        <div className="bs:ml-10 bs:w-3/5 flex flex-col h-full lg-mx:gap-3 bs-mx:items-center">
           <div className="text-primary text-3xl lg-mx:text-2xl xs-mx:text-xl xsm-mx:text-lg">
             Hi, I am
           </div>
@@ -62,7 +63,7 @@ const About = () => {
             {Info.name}
           </div>
           <div className="text-base-content text-4xl flex font-semibold lg-mx:text-[27px] sm-mx:text-2xl xs-mx:text-xl xsm-mx:text-base">
-            I'm a&nbsp;
+            I&apos;m a&nbsp;
             <span className="text-primary">
               <Typewriter
                 options={{ strings: Info.stack, autoStart: true, loop: true }}
@@ -87,9 +88,11 @@ const About = () => {
         </div>
         <div className="h-fit flex justify-center items-center rounded-full bs:mr-10 w-fit">
           <NeonGradientCard className="w-[325px] h-[325px] lg-mx:w-64 lg-mx:h-64 xsm-mx:w-56 xsm-mx:h-56 items-center justify-center text-center">
-            <img
+            <Image
               className="w-full h-full rounded-full"
-              src="profile.jpg"
+              src="/profile.jpg"
+              height={325}
+              width={325}
               alt="profile"
             />
           </NeonGradientCard>

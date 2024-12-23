@@ -15,7 +15,7 @@ const links = [
   "Experience",
   "Contact",
 ];
-const navLinks = (col: Boolean, clicked: any) => {
+const navLinks = (col: boolean, clicked: any) => {
   const handleClick = () => {
     if (clicked) clicked();
   };

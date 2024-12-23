@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import dbConfig from "@/middleware/db.config";
 import Language from "@/models/Language";
 import Review from "@/models/Review";

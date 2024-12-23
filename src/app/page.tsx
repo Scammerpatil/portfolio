@@ -13,6 +13,7 @@ import Experience from "@/components/Experience";
 import axios from "axios";
 import { User } from "@/types/User";
 import Testimonials from "@/components/Testimonials";
+import ScrollUp from "@/components/Common/ScrollUp";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
@@ -50,6 +51,7 @@ const HomePage = () => {
           <Mail />
           <Social />
           <Footer />
+          <ScrollUp />
         </>
       ) : (
         <Loader />

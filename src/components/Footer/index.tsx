@@ -2,7 +2,7 @@ import { Info, socialLinks } from "@/components/User";
 
 const Footer = () => {
   return (
-    <div className="pt-36 font-mono flex flex-col gap-2 items-center justify-end bg-[url('/bg.png')] h-72 bg-cover bg-center bg-no-repeat">
+    <div className="pt-36 w-full font-mono flex flex-col gap-2 items-center justify-end bg-[url('/bg.png')] h-72 bg-contain bg-black bg-center bg-no-repeat">
       <div className="md-mx:flex hidden text-base-content gap-8 sm-mx:gap-6">
         {socialLinks.map((icon, index) => (
           <a

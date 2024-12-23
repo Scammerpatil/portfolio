@@ -1,6 +1,8 @@
 import { Timeline, useMatches } from "@mantine/core";
 import { IconBriefcaseFilled } from "@tabler/icons-react";
 import { ExperienceInfo } from "@/components/User";
+import SectionTitle from "../Common/SectionTitle";
+import Image from "next/image";
 
 const TimelineItem = (items: any) => {
   const size = useMatches({
@@ -17,9 +19,11 @@ const TimelineItem = (items: any) => {
     >
       <div className="border shadow-[0_0_10px_0_#64FFDA50] hover:-translate-y-2 transition transform duration-300 ease-in-out flex flex-col gap-2 border-primaryColor p-4 rounded-2xl sm-mx:p-2">
         <div className="flex gap-2 items-center">
-          <img
+          <Image
             className="rounded-lg w-16 md-mx:w-14"
             src={`${item.company}.png`}
+            width={64}
+            height={64}
             alt="Company"
           />
           <div className="flex flex-col">
@@ -62,9 +66,11 @@ const Experience = () => {
       className="px-16 mx-20 md-mx:px-6 sm-mx:px-2 lg-mx:mx-0 my-10 mb-28 font-mono"
       id="Experience"
     >
-      <h1 className="text-4xl sm-mx:text-3xl xs-mx:text-2xl  mb-10 font-bold text-center text-white">
-        <span className="text-primaryColor">&nbsp;</span>Experience
-      </h1>
+      <SectionTitle
+        title="Battlefield Experience ⚔️"
+        paragraph="A journey through the roles I've conquered and lessons I've mastered."
+      />
+
       <Timeline color="#64FFDA" active={5} bulletSize={dot} lineWidth={2}>
         {TimelineItem(ExperienceInfo)}
         <Timeline.Item

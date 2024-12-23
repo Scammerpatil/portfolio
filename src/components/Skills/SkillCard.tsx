@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 
 interface Skill {
@@ -26,9 +27,11 @@ const SkillBadgeItem = ({ skill }: { skill: Skill }) => {
 
   return (
     <div className="flex gap-2 border border-base-100 shadow-md shadow-primary rounded-2xl items-center py-2 px-3 bs-mx:py-0 bs-mx:px-1.5 bs-mx:gap-1 mb-1">
-      <img
+      <Image
         className="w-[48px] bs-mx:w-[36px] xsm-mx:w-[28px] !p-1"
         src={src}
+        width={48}
+        height={48}
         alt={`${skill.name} icon`}
         onError={handleImageError}
       />
