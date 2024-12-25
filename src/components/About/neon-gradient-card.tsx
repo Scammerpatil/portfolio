@@ -11,6 +11,8 @@ import {
 
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { useColorContext } from "@/context/colorContext";
+import Color from "colorjs.io";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -78,13 +80,24 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
   borderSize = 4,
   borderRadius = 9999,
   neonColors = {
-    firstColor: "#ff00aa",
-    secondColor: "#00FFF1",
+    firstColor: useColorContext().color,
+    secondColor: "#FF0000",
   },
   ...props
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  function oklchToHex(oklchString: string) {
+    const oklch = `oklch(${oklchString})`;
+    return new Color(oklch)
+      .toGamut({ space: "srgb" })
+      .to("srgb")
+      .toString({ format: "hex" });
+  }
+  const root = document.documentElement;
+  const primaryColor = getComputedStyle(root).getPropertyValue("--s").trim();
+
+  const convertedColor = oklchToHex(primaryColor);
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -117,7 +130,7 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
           "--border-size": `${borderSize}px`,
           "--border-radius": `${borderRadius}px`,
           "--neon-first-color": neonColors.firstColor,
-          "--neon-second-color": neonColors.secondColor,
+          "--neon-second-color": convertedColor,
           "--card-width": `${dimensions.width}px`,
           "--card-height": `${dimensions.height}px`,
           "--card-content-radius": `${borderRadius - borderSize}px`,

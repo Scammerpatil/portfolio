@@ -15,34 +15,30 @@ const Contact = () => {
     e.preventDefault();
     const { name, email, message } = formData;
     if (!name || !email || !message) {
-      alert("Please fill all the fields");
+      toast.error("Please fill all the fields");
       return;
     }
     const res = axios.post("/api/addTicket", formData);
-    toast.promise(
-      res,
-      {
-        loading: "Submitting...",
-        success: "Ticket submitted successfully!",
-        error: "Failed to submit ticket. Try again later.",
+    toast.promise(res, {
+      loading: "Submitting...",
+      success: () => {
+        setFormData({ name: "", email: "", message: "" });
+        return "Ticket submitted successfully. I'll get back to you soon!";
       },
-      {
-        duration: 4000,
-      }
-    );
+      error: "Failed to submit ticket. Try again later.",
+    });
   };
 
   return (
     <section
       id="contact"
-      className="overflow-hidden py-16 md:py-20 lg:py-28 bg-base-200"
+      className="overflow-hidden md:px-16 py-16 md:py-20 lg:py-28 bg-base-200"
       data-aos="fade-up"
       data-aos-duration="800"
     >
       <SectionTitle
         title="Let's Have a Chat (or Fix Your Problem 🙃)"
         paragraph="I'm always open to new opportunities and conversations. Feel free to reach out to me for any inquiries, help, or just to connect!"
-        center
       />
 
       <div className="-mx-4 flex flex-wrap">

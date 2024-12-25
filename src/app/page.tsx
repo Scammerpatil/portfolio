@@ -20,17 +20,30 @@ const HomePage = () => {
   const [user, setUser] = useState<User>({
     languages: [],
     testimonials: [],
+    projects: [],
+    visitorCount: 0,
   });
   useEffect(() => {
     const fetchUser = async () => {
       setLoading(true);
       const userData = await axios.get("/api/getUser");
-      console.log(userData.data);
       setUser(userData.data);
       setLoading(false);
     };
 
     fetchUser();
+  }, []);
+
+  useEffect(() => {
+    const fetchUniqueID = async () => {
+      const uniqueID = sessionStorage.getItem("uniqueID");
+      if (!uniqueID) {
+        const uniqueId = await axios.get("/api/track-visitor");
+        console.log(uniqueId.data);
+        sessionStorage.setItem("uniqueID", uniqueId.data.uniqueID);
+      }
+    };
+    fetchUniqueID();
   }, []);
 
   return (
@@ -43,14 +56,14 @@ const HomePage = () => {
         <>
           <Header />
           <About />
-          <Projects />
+          <Projects projects={user.projects} />
           <Skills language={user.languages} />
           <Experience />
           <Testimonials testimonial={user.testimonials} />
           <Contact />
           <Mail />
           <Social />
-          <Footer />
+          <Footer visitorCount={user.visitorCount} />
           <ScrollUp />
         </>
       ) : (

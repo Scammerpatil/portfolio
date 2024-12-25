@@ -1,8 +1,12 @@
 import { Info, socialLinks } from "@/components/User";
 
-const Footer = () => {
+const Footer = ({ visitorCount }: { visitorCount: number }) => {
+  // Format visitor count to include leading zeros
+  const formattedVisitorCount = String(visitorCount).padStart(6, "0").split("");
+
   return (
-    <div className="pt-36 w-full font-mono flex flex-col gap-2 items-center justify-end bg-[url('/bg.png')] h-72 bg-contain bg-black bg-center bg-no-repeat">
+    <div className="pt-36 w-full font-mono flex flex-col gap-4 items-center justify-end bg-[url('/bg.png')] h-72 bg-contain bg-black bg-center bg-no-repeat">
+      {/* Social Links */}
       <div className="md-mx:flex hidden text-base-content gap-8 sm-mx:gap-6">
         {socialLinks.map((icon, index) => (
           <a
@@ -15,11 +19,26 @@ const Footer = () => {
           </a>
         ))}
       </div>
+
+      {/* Copyright Information */}
       <div className="text-white text-xl md-mx:text-lg sm-mx:text-base xs-mx:text-sm xs-mx:flex flex-col items-center">
         Copyright &copy; {new Date().getFullYear()} {Info.name}{" "}
         <span className="xs-mx:hidden">|</span> <span>All Rights Reserved</span>
       </div>
+
+      {/* Visitor Count Display */}
+      <div className="flex gap-2">
+        {formattedVisitorCount.map((digit, index) => (
+          <span
+            key={index}
+            className="flex items-center justify-center w-10 h-10 bg-gray-700 text-white text-xl md:text-2xl font-bold rounded-md shadow-md"
+          >
+            {digit}
+          </span>
+        ))}
+      </div>
     </div>
   );
 };
+
 export default Footer;

@@ -1,5 +1,6 @@
+import { useColorContext } from "@/context/colorContext";
 import { IconChevronDown, IconSun } from "@tabler/icons-react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const ThemeController = () => {
   const themes = [
@@ -37,11 +38,10 @@ const ThemeController = () => {
     "nord",
     "sunset",
   ];
-  const [currentTheme, setCurrentTheme] = useState<string>("baseTheme");
+  const { color, setColor } = useColorContext();
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme") || "baseTheme";
-    setCurrentTheme(storedTheme);
     applyTheme(storedTheme);
   }, []);
 
@@ -51,8 +51,8 @@ const ThemeController = () => {
   };
 
   const handleThemeChange = (theme: string) => {
-    setCurrentTheme(theme);
     applyTheme(theme);
+    setColor();
   };
 
   return (
@@ -71,16 +71,14 @@ const ThemeController = () => {
       >
         {themes.map((theme) => (
           <li key={theme}>
-            <label className="theme-controller btn btn-sm btn-block btn-ghost justify-start capitalize">
-              <input
-                type="radio"
-                name="theme-dropdown"
-                aria-label={theme}
-                value={theme}
-                onChange={() => handleThemeChange(theme)}
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start capitalize"
-              />
-            </label>
+            <input
+              type="radio"
+              name="theme-dropdown"
+              aria-label={theme}
+              value={theme}
+              onChange={() => handleThemeChange(theme)}
+              className="theme-controller btn btn-sm btn-block btn-ghost justify-start capitalize"
+            />
           </li>
         ))}
       </ul>

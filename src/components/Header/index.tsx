@@ -5,6 +5,7 @@ import { em } from "@mantine/core";
 import { useEffect, useState } from "react";
 import ThemeController from "./ThemeController";
 import toast from "react-hot-toast";
+import SignInModel from "../Dialog/SignIn";
 
 const links = [
   "About",
@@ -79,7 +80,9 @@ const Header = () => {
         <button
           className="hidden lg:block btn btn-primary cursor-pointer opacity-0"
           onClick={() => {
-            toast.success("Sign In");
+            (
+              document.getElementById("signin") as HTMLDialogElement
+            ).showModal();
           }}
         >
           Sign In
@@ -87,6 +90,7 @@ const Header = () => {
         <ThemeController />
       </div>
       <SideBar />
+      <SignInModel />
     </div>
   );
 };

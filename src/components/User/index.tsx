@@ -105,86 +105,6 @@ const ProjectInfo = [
   },
 ];
 
-const SkillInfo = [
-  {
-    title: "Frontend",
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React JS",
-      "Redux",
-      "Tailwind CSS",
-      "DaisyUI",
-      "Chakra UI",
-      "Next JS",
-      "Material UI",
-      "Bootstrap",
-      "EJS",
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
-      "Springboot",
-      "Spring Security",
-      "Node JS",
-      "Express JS",
-      "MySQL",
-      "MongoDB",
-      "Flask",
-      "PHP",
-      "REST APIs",
-      "Servlets",
-      "JSP",
-      "WebSockets",
-    ],
-  },
-  {
-    title: "Languages",
-    skills: [
-      "C",
-      "C++",
-      "Java",
-      "JavaScript",
-      "TypeScript",
-      "Python",
-      "SQL",
-      "Bash/Shell Scripting",
-    ],
-  },
-  {
-    title: "Tools",
-    skills: [
-      "Git",
-      "Github",
-      "VS Code",
-      "Postman",
-      "MongoDB Compass",
-      "Spring Tool Suite",
-      "Docker",
-      "Figma",
-      "Heroku",
-      "Netlify",
-      "Vercel",
-      "Google Cloud Platform",
-    ],
-  },
-  {
-    title: "AI/ML Frameworks",
-    skills: [
-      "TensorFlow",
-      "Keras",
-      "OpenCV",
-      "Scikit-learn",
-      "PyTorch",
-      "Pandas",
-      "NumPy",
-      "Matplotlib",
-    ],
-  },
-];
-
 const socialLinks = [
   { link: "https://github.com/scammerpatil", icon: IconBrandGithub },
   {
@@ -280,4 +200,4 @@ const Slugs = [
   "figma",
 ];
 
-export { Info, ProjectInfo, socialLinks, SkillInfo, ExperienceInfo, Slugs };
+export { Info, ProjectInfo, socialLinks, ExperienceInfo, Slugs };

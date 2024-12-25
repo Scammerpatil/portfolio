@@ -15,6 +15,7 @@
     "@texel/color": "^1.1.4",
     "aos": "^2.3.4",
     "axios": "^1.7.9",
+    "cloudinary": "^2.5.1",
     "colorjs.io": "^0.5.2",
     "culori": "^4.0.1",
     "ejs": "^3.1.10",
@@ -27,6 +28,7 @@
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.4.1",
     "react-icon-cloud": "^4.1.4",
+    "react-pdf": "^9.2.1",
     "tailwind-merge": "^2.5.5",
     "typewriter-effect": "^2.21.0",
     "vanta": "^0.5.24"

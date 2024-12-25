@@ -10,8 +10,10 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import FullProjectModal from "./FullProjectModal";
+import { useColorContext } from "@/context/colorContext";
 const ProjectCard = (props: any) => {
   const [opened, { open, close }] = useDisclosure(false);
+  const { color } = useColorContext();
   const badge = useMatches({
     xsm: "sm",
     md: "md",
@@ -30,7 +32,7 @@ const ProjectCard = (props: any) => {
     >
       <Card
         onClick={open}
-        className="!bg-bgColor cursor-pointer transition-transform duration-300 ease-in-out hover:!scale-[1.02] mb-5 hover:!shadow-[0_0_10px_1px_#64FFDA80] xs-mx:!shadow-[0_0_10px_1px_#64FFDA80] !border-primaryColor border-2"
+        className="!bg-base-300 cursor-pointer transition-transform duration-300 ease-in-out hover:!scale-[1.02] mb-5 hover:!shadow-[0_0_10px_1px_#64FFDA80] xs-mx:!shadow-[0_0_10px_1px_#64FFDA80] !border-primary border-2"
         shadow="lg"
         padding="sm"
         radius="lg"
@@ -45,7 +47,7 @@ const ProjectCard = (props: any) => {
         </Card.Section>
 
         <Group justify="space-between" mt="xs" mb="xs">
-          <div className="!text-2xl gap-2 !font-bold !text-white flex items-center sm-mx:!text-xl">
+          <div className="!text-2xl gap-2 !font-bold !text-base-content flex items-center sm-mx:!text-xl">
             {props.title}
             {props.live === true && (
               <Badge
@@ -71,7 +73,7 @@ const ProjectCard = (props: any) => {
           {props.technologies.map(
             (tech: string, index: number) =>
               index < 3 && (
-                <Badge key={index} size={badge} variant="light" color="#64FFDA">
+                <Badge key={index} size={badge} variant="light" color={color}>
                   {tech}
                 </Badge>
               )
@@ -89,7 +91,7 @@ const ProjectCard = (props: any) => {
         <Button
           onClick={open}
           className=""
-          color="#64FFDA"
+          color={color}
           variant="outline"
           mt="md"
           radius="md"

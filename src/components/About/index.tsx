@@ -3,47 +3,20 @@ import Typewriter from "typewriter-effect";
 import { IconDownload } from "@tabler/icons-react";
 import Particles from "./Particles";
 import { NeonGradientCard } from "./neon-gradient-card";
-import { useEffect, useState } from "react";
-import Color from "colorjs.io";
 import Image from "next/image";
+import { useColorContext } from "@/context/colorContext";
+import ResumeViewer from "../ResumeViewer";
+import { useDisclosure } from "@mantine/hooks";
 
 const About = () => {
-  const [color, setColor] = useState<string>();
-  const [theme, setTheme] = useState<string>("");
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme") || "baseTheme";
-    document.documentElement.setAttribute("data-theme", storedTheme);
-  }, [theme]);
-
-  function oklchToHex(oklchString: string) {
-    const oklch = `oklch(${oklchString})`;
-    const color = new Color(oklch)
-      .toGamut({ space: "srgb" })
-      .to("srgb")
-      .toString({ format: "hex" });
-    return color;
-  }
-
-  const root = document.documentElement;
-  useEffect(() => {
-    try {
-      const primaryColor = getComputedStyle(root)
-        .getPropertyValue("--p")
-        .trim();
-      const convertedColor = oklchToHex(primaryColor);
-      setColor(convertedColor);
-    } catch (error) {
-      console.error("Error initializing About component:", error);
-    }
-  }, [theme, root]);
-
+  const color = useColorContext().color;
+  const [opened, { open, close }] = useDisclosure(false);
   return (
     <>
       <div
         data-aos="zoom-out-up"
         data-aos-duration="800"
-        className="bg-base-300 flex flex-col lg:flex-row relative overflow-hidden justify-center lg:justify-around items-center font-mono px-6 md:px-10 py-10 md:py-16 lg:py-32 min-h-screen gap-6 sm-mx:flex-col-reverse aos-init aos-animate"
+        className="bg-base-300 flex flex-col lg:flex-row relative overflow-hidden justify-center lg:justify-around items-center font-mono pt-20 px-6 md:px-10 py-10 md:py-16 lg:py-32 min-h-screen gap-6 sm-mx:flex-col-reverse aos-init aos-animate"
         id="About"
       >
         <Particles
@@ -74,12 +47,15 @@ const About = () => {
             {Info.bio}
           </div>
           <div className="xs-mx:w-[90%] flex gap-3 xs-mx:justify-between">
-            <button className="btn btn-secondary text-secondary-content text-base lg:text-lg">
+            <button
+              className="btn btn-secondary text-secondary-content text-base lg:text-lg"
+              onClick={open}
+            >
               Check Resume
             </button>
             <a
-              href="Resume.pdf"
-              download={Info.name}
+              href="/Saurav Deepak Patil_Computer_Engineering.pdf"
+              download="Saurav Deepak Patil_Computer_Engineering"
               className="btn btn-primary text-primary-content text-base lg:text-lg"
             >
               Download <IconDownload size={20} />
@@ -97,6 +73,7 @@ const About = () => {
             />
           </NeonGradientCard>
         </div>
+        <ResumeViewer opened={opened} close={close} />
       </div>
     </>
   );

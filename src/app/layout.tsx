@@ -1,11 +1,12 @@
 "use client";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./globals.css";
+import "./index.css";
 import "@mantine/core/styles.css";
 import { MantineProvider, createTheme } from "@mantine/core";
 import { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
+import { ColorProvider } from "@/context/colorContext";
 
 const theme = createTheme({
   breakpoints: {
@@ -40,10 +41,12 @@ export default function RootLayout({
         />
       </head>
       <body className={`antialiased bg-base-100`}>
-        <MantineProvider theme={theme}>
-          <Toaster />
-          {children}
-        </MantineProvider>
+        <ColorProvider>
+          <MantineProvider theme={theme}>
+            <Toaster />
+            {children}
+          </MantineProvider>
+        </ColorProvider>
       </body>
     </html>
   );

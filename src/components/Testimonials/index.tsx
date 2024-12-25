@@ -56,7 +56,7 @@ const Testimonials = ({ testimonial }: { testimonial: Testimonial[] }) => {
   };
 
   return (
-    <section className="relative bg-base-300 z-10 py-16 md:py-20 lg:py-28">
+    <section className="relative bg-base-300 py-16 md:py-20 lg:py-28">
       <SectionTitle
         title="Raving Reviews & Wild Compliments 🚀"
         paragraph="Hear the buzz from my amazing clients and collaborators! Spoiler: They love working with me (and you will too)."

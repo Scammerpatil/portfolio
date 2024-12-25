@@ -4,7 +4,10 @@ import IconCloud from "./icon-cloud";
 
 export function Loader() {
   return (
-    <div className="relative bg-base-100 flex h-full w-full animate-[ping_1.5s_ease-in-out_1_4.5s] items-center justify-center">
+    <div
+      className="relative bg-base-100 flex h-full w-full animate-[ping_1.5s_ease-in-out_1_4.5s] items-center justify-center"
+      suppressHydrationWarning={true}
+    >
       <IconCloud iconSlugs={Slugs} />
       <IconHexagon
         className="absolute -z-10 animate-[spin_5s_linear_infinite] text-primary"
