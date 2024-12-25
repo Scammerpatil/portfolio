@@ -1,6 +1,12 @@
-import { Info, socialLinks } from "@/components/User";
+import { socialLinks } from "@/components/User";
 
-const Footer = ({ visitorCount }: { visitorCount: number }) => {
+const Footer = ({
+  visitorCount,
+  name,
+}: {
+  visitorCount: number;
+  name: string;
+}) => {
   // Format visitor count to include leading zeros
   const formattedVisitorCount = String(visitorCount).padStart(6, "0").split("");
 
@@ -22,7 +28,7 @@ const Footer = ({ visitorCount }: { visitorCount: number }) => {
 
       {/* Copyright Information */}
       <div className="text-white text-xl md-mx:text-lg sm-mx:text-base xs-mx:text-sm xs-mx:flex flex-col items-center">
-        Copyright &copy; {new Date().getFullYear()} {Info.name}{" "}
+        Copyright &copy; {new Date().getFullYear()} {name}{" "}
         <span className="xs-mx:hidden">|</span> <span>All Rights Reserved</span>
       </div>
 

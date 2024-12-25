@@ -1,17 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+*:hover {
+  scrollbar-color: auto;
+}
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  background-color: #112240;
+  background-color: oklch(var(--sc));
 }
 
 ::-webkit-scrollbar {
   width: 4px;
-  background-color: #112240;
+  background-color: oklch(var(--s));
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #64ffda;
+  background-color: oklch(var(--s));
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

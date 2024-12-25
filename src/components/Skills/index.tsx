@@ -14,7 +14,7 @@ const Skills = ({ language }: { language: Language[] }) => {
       />
 
       <div className="flex flex-wrap justify-around md-mx:justify-between sm-mx:justify-center gap-4 md-mx:gap-2">
-        {language.map((skill: any, index: number) => (
+        {language.map((skill: Language, index: number) => (
           <SkillCard key={index} title={skill.title} skills={skill.skills} />
         ))}
       </div>

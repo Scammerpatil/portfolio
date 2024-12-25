@@ -1,14 +1,10 @@
 import { useDisclosure } from "@mantine/hooks";
-import { Drawer, useMatches } from "@mantine/core";
+import { Drawer } from "@mantine/core";
 import { navLinks } from "./index";
 import { IconMenu2 } from "@tabler/icons-react";
 
 const SideBar = () => {
   const [opened, { toggle }] = useDisclosure(false);
-  const size = useMatches({
-    xs: "md",
-    sm: "lg",
-  });
 
   return (
     <>

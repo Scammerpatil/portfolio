@@ -1,15 +1,12 @@
 import { ProjectData } from "@/types/Project";
 import SectionTitle from "../Common/SectionTitle";
-import { ProjectInfo } from "../User";
 import ProjectCard from "./ProjectCard";
 import { useState } from "react";
 
 const Projects = ({ projects }: { projects: ProjectData[] }) => {
-  // Extract unique stacks from the projects
   const stacks = Array.from(
-    new Set(projects.map((project: any) => project.stack))
+    new Set(projects.map((project: ProjectData) => project.stack))
   );
-  console.log(stacks);
   const [activeTab, setActiveTab] = useState(stacks[0]);
 
   return (
@@ -39,8 +36,8 @@ const Projects = ({ projects }: { projects: ProjectData[] }) => {
       {/* Tab content */}
       <div className="flex flex-wrap justify-around md:justify-between sm:justify-center gap-4 md:gap-2 mt-6">
         {projects
-          .filter((project: any) => project.stack === activeTab)
-          .map((project: any, index: number) => (
+          .filter((project: ProjectData) => project.stack === activeTab)
+          .map((project: ProjectData, index: number) => (
             <ProjectCard
               key={index}
               title={project.title}

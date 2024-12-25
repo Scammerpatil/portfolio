@@ -11,18 +11,14 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import FullProjectModal from "./FullProjectModal";
 import { useColorContext } from "@/context/colorContext";
-const ProjectCard = (props: any) => {
+import { ProjectData } from "@/types/Project";
+const ProjectCard = (props: ProjectData) => {
   const [opened, { open, close }] = useDisclosure(false);
   const { color } = useColorContext();
   const badge = useMatches({
     xsm: "sm",
     md: "md",
     lg: "lg",
-  });
-  const btn = useMatches({
-    xs: "xs",
-    sm: "sm",
-    md: "md",
   });
   return (
     <div

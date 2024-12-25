@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
       {
         hostname: "cdn.simpleicons.org",
       },
+      {
+        hostname: "res.cloudinary.com",
+      },
     ],
   },
 };

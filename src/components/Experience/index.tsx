@@ -1,16 +1,16 @@
 import { Timeline, useMatches } from "@mantine/core";
 import { IconBriefcaseFilled } from "@tabler/icons-react";
-import { ExperienceInfo } from "@/components/User";
 import SectionTitle from "../Common/SectionTitle";
 import Image from "next/image";
 import { useColorContext } from "@/context/colorContext";
+import { Experience } from "@/types/Experience";
 
-const TimelineItem = (items: any) => {
+const TimelineItem = (items: Experience[]) => {
   const size = useMatches({
     xs: 15,
     md: 20,
   });
-  return items.map((item: any, index: number) => (
+  return items.map((item: Experience, index: number) => (
     <Timeline.Item
       data-aos="fade-up"
       data-aos-duration="800"
@@ -18,21 +18,28 @@ const TimelineItem = (items: any) => {
       className="!pt-12 !mb-2 sm-mx:!p-1"
       bullet={<IconBriefcaseFilled className="!text-base-100" size={size} />}
     >
-      <div className="border shadow-[0_0_10px_0_#64FFDA50] hover:-translate-y-2 transition transform duration-300 ease-in-out flex flex-col gap-2 border-primary p-4 rounded-2xl sm-mx:p-2">
+      <div className="border shadow-primary shadow-md hover:-translate-y-2 transition transform duration-300 ease-in-out flex flex-col gap-2 border-primary p-4 rounded-2xl sm-mx:p-2">
         <div className="flex gap-2 items-center">
           <Image
-            className="rounded-lg w-16 md-mx:w-14"
-            src={`/${item.company}.png`}
+            className="w-16 md-mx:w-14 rounded-full"
+            src={`${item.image}`}
             width={64}
             height={64}
             alt="Company"
           />
           <div className="flex flex-col">
-            <div className="text-white text-2xl font-semibold sm-mx:text-xl xs-mx:text-lg xsm-mx:text-base">
+            <div className="text-base-content text-2xl font-semibold sm-mx:text-xl xs-mx:text-lg xsm-mx:text-base">
               {item.role}
             </div>
-            <div className="text-lg font-semibold text-base-content md-mx:text-base sm-mx:text-sm xs-mx:text-xs">
-              {item.company} &#x2022; {item.date}
+            <div className="text-lg font-semibold text-base-content flex gap-3 md-mx:text-base sm-mx:text-sm xs-mx:text-xs">
+              <a
+                href={item.companyURL}
+                target="_blank"
+                className="hover:underline cursor-pointer"
+              >
+                {item.company}
+              </a>
+              &#x2022; {item.date}
             </div>
           </div>
         </div>
@@ -41,9 +48,9 @@ const TimelineItem = (items: any) => {
         </div>
 
         <div className="text-lg font-medium text-base-content md-mx:text-base sm-mx:text-sm xs-mx:text-xs flex gap-1">
-          <div className="font-semibold text-white">Skills:</div>
-          <div className="flex gap-1 flex-wrap">
-            {item.skills.map((skill: any, index: number) => (
+          <div className="font-semibold text-base-content">Skills:</div>
+          <div className="flex gap-1 flex-wrap text-base-content/80">
+            {item.skills.map((skill: string, index: number) => (
               <div key={index}> &#x2022; {skill} </div>
             ))}
           </div>
@@ -53,7 +60,7 @@ const TimelineItem = (items: any) => {
   ));
 };
 
-const Experience = () => {
+const ExperienceModel = ({ experience }: { experience: Experience[] }) => {
   const size = useMatches({
     xs: 15,
     md: 20,
@@ -74,12 +81,14 @@ const Experience = () => {
       />
 
       <Timeline color={color} active={5} bulletSize={dot} lineWidth={2}>
-        {TimelineItem(ExperienceInfo)}
+        {TimelineItem(experience)}
         <Timeline.Item
-          bullet={<IconBriefcaseFilled className="!text-bgColor" size={size} />}
+          bullet={
+            <IconBriefcaseFilled className="!text-base-100" size={size} />
+          }
         ></Timeline.Item>
       </Timeline>
     </div>
   );
 };
-export default Experience;
+export default ExperienceModel;

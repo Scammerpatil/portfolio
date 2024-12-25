@@ -4,24 +4,39 @@ import ticketEmail from "@/middleware/ticketEmail";
 
 export async function POST(req: NextRequest) {
   const { name, email, message } = await req.json();
+
   if (!name || !email || !message) {
-    return { status: 400, json: { message: "Please fill all the fields" } };
+    return NextResponse.json(
+      { message: "Please fill all the fields" },
+      { status: 400 }
+    );
   }
+
   const ticket = new Ticket({
     name,
     email,
     message,
   });
-  const newTicket = await ticket.save();
-  if (newTicket) {
-    await ticketEmail(email, name, message, newTicket);
+
+  try {
+    const newTicket = await ticket.save();
+
+    if (newTicket) {
+      await ticketEmail(email, name, message, newTicket);
+      return NextResponse.json(
+        { message: "Ticket submitted successfully" },
+        { status: 200 }
+      );
+    } else {
+      return NextResponse.json(
+        { message: "Failed to submit ticket" },
+        { status: 500 }
+      );
+    }
+  } catch {
     return NextResponse.json(
-      { message: "Ticket submitted successfully" },
-      { status: 200 }
+      { message: "An error occurred while submitting the ticket" },
+      { status: 500 }
     );
   }
-  return NextResponse.json(
-    { message: "Failed to submit ticket" },
-    { status: 500 }
-  );
 }

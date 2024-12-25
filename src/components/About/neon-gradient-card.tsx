@@ -80,12 +80,13 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
   borderSize = 4,
   borderRadius = 9999,
   neonColors = {
-    firstColor: useColorContext().color,
+    firstColor: "#FF00FF",
     secondColor: "#FF0000",
   },
   ...props
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const color = useColorContext().color;
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   function oklchToHex(oklchString: string) {
     const oklch = `oklch(${oklchString})`;
@@ -129,7 +130,7 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
         {
           "--border-size": `${borderSize}px`,
           "--border-radius": `${borderRadius}px`,
-          "--neon-first-color": neonColors.firstColor,
+          "--neon-first-color": color,
           "--neon-second-color": convertedColor,
           "--card-width": `${dimensions.width}px`,
           "--card-height": `${dimensions.height}px`,

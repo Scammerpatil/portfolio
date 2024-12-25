@@ -1,3 +1,4 @@
+import { Language } from "@/types/Language";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -42,7 +43,7 @@ const SkillBadgeItem = ({ skill }: { skill: Skill }) => {
   );
 };
 
-const SkillCard = (props: any) => {
+const SkillCard = (props: Language) => {
   return (
     <div
       data-aos="fade-up"

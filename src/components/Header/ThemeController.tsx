@@ -38,7 +38,7 @@ const ThemeController = () => {
     "nord",
     "sunset",
   ];
-  const { color, setColor } = useColorContext();
+  const { setColor } = useColorContext();
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme") || "baseTheme";

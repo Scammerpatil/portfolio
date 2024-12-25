@@ -11,7 +11,19 @@ import {
   useMatches,
 } from "@mantine/core";
 
-const FullProjectModal = (props: any) => {
+interface FullProjectModalProps {
+  opened: boolean;
+  close: () => void;
+  title: string;
+  live: boolean;
+  image: string;
+  technologies: string[];
+  desc: string;
+  github: string;
+  link?: string;
+}
+
+const FullProjectModal = (props: FullProjectModalProps) => {
   const download = useMatches({ xs: "xs", md: "sm", lg: "md", bs: "lg" });
   const techno = useMatches({ xs: "md", sm: "md", md: "lg", bs: "xl" });
   const btn = useMatches({ xs: "xs", sm: "sm", md: "md", lg: "lg" });

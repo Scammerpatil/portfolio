@@ -45,12 +45,12 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       technologies,
       link,
       github,
+      image: uploadedImageUrl.secure_url,
       stack,
     };
 
     const project = await Project.create({
       ...newProject,
-      image: uploadedImageUrl.secure_url,
     });
 
     return NextResponse.json(

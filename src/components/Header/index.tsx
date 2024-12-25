@@ -4,7 +4,6 @@ import { useMediaQuery } from "@mantine/hooks";
 import { em } from "@mantine/core";
 import { useEffect, useState } from "react";
 import ThemeController from "./ThemeController";
-import toast from "react-hot-toast";
 import SignInModel from "../Dialog/SignIn";
 
 const links = [
@@ -16,7 +15,7 @@ const links = [
   "Experience",
   "Contact",
 ];
-const navLinks = (col: boolean, clicked: any) => {
+const navLinks = (col: boolean, clicked: (() => void) | null | undefined) => {
   const handleClick = () => {
     if (clicked) clicked();
   };

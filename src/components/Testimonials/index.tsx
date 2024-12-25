@@ -50,8 +50,8 @@ const Testimonials = ({ testimonial }: { testimonial: Testimonial[] }) => {
         },
         error: "Failed to submit review",
       });
-    } catch (error: unknown) {
-      toast.error("Failed to submit review", (error as any).toString());
+    } catch {
+      toast.error("Failed to submit review");
     }
   };
 

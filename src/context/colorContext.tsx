@@ -1,6 +1,12 @@
 "use client";
 import Color from "colorjs.io";
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 type ColorContextType = {
   color: string;
@@ -11,20 +17,6 @@ const ColorContext = createContext<ColorContextType | undefined>(undefined);
 
 export const ColorProvider = ({ children }: { children: React.ReactNode }) => {
   const [color, setColorState] = useState<string>("#4a00ff");
-  const [theme, setTheme] = useState<string>("");
-
-  // Initialize theme and color from localStorage
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme") || "baseTheme";
-    document.documentElement.setAttribute("data-theme", storedTheme);
-
-    const storedColor = localStorage.getItem("color");
-    if (storedColor) {
-      setColorState(storedColor);
-    } else {
-      triggerColorUpdate();
-    }
-  }, []);
 
   // Convert OKLCH to HEX
   function oklchToHex(oklchString: string) {
@@ -36,7 +28,7 @@ export const ColorProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   // Method to trigger color update
-  const triggerColorUpdate = () => {
+  const triggerColorUpdate = useCallback(() => {
     try {
       const root = document.documentElement;
       const primaryColor = getComputedStyle(root)
@@ -51,7 +43,20 @@ export const ColorProvider = ({ children }: { children: React.ReactNode }) => {
     } catch (error) {
       console.error("Error fetching primary color:", error);
     }
-  };
+  }, []);
+
+  // Initialize theme and color from localStorage
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme") || "baseTheme";
+    document.documentElement.setAttribute("data-theme", storedTheme);
+
+    const storedColor = localStorage.getItem("color");
+    if (storedColor) {
+      setColorState(storedColor);
+    } else {
+      triggerColorUpdate();
+    }
+  }, [triggerColorUpdate]);
 
   return (
     <ColorContext.Provider value={{ color, setColor: triggerColorUpdate }}>

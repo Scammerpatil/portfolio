@@ -1,16 +1,20 @@
-import { Info } from "../User";
 import Typewriter from "typewriter-effect";
 import { IconDownload } from "@tabler/icons-react";
 import Particles from "./Particles";
 import { NeonGradientCard } from "./neon-gradient-card";
 import Image from "next/image";
 import { useColorContext } from "@/context/colorContext";
-import ResumeViewer from "../ResumeViewer";
-import { useDisclosure } from "@mantine/hooks";
 
-const About = () => {
+const About = ({
+  name,
+  bio,
+  stack,
+}: {
+  name: string;
+  bio: string;
+  stack: string[];
+}) => {
   const color = useColorContext().color;
-  const [opened, { open, close }] = useDisclosure(false);
   return (
     <>
       <div
@@ -33,24 +37,21 @@ const About = () => {
             Hi, I am
           </div>
           <div className="text-base-content text-[4.25rem] font-extrabold lg-mx:text-5xl sm-mx:text-4xl xs-mx:text-3xl xsm-mx:text-[27px]">
-            {Info.name}
+            {name}
           </div>
           <div className="text-base-content text-4xl flex font-semibold lg-mx:text-[27px] sm-mx:text-2xl xs-mx:text-xl xsm-mx:text-base">
             I&apos;m a&nbsp;
             <span className="text-primary">
               <Typewriter
-                options={{ strings: Info.stack, autoStart: true, loop: true }}
+                options={{ strings: stack, autoStart: true, loop: true }}
               />
             </span>
           </div>
           <div className="text-base-content text-xl text-justify my-8 lg-mx:my-0 font-semibold lg-mx:text-sm">
-            {Info.bio}
+            {bio}
           </div>
           <div className="xs-mx:w-[90%] flex gap-3 xs-mx:justify-between">
-            <button
-              className="btn btn-secondary text-secondary-content text-base lg:text-lg"
-              onClick={open}
-            >
+            <button className="btn btn-secondary text-secondary-content text-base lg:text-lg">
               Check Resume
             </button>
             <a
@@ -73,7 +74,6 @@ const About = () => {
             />
           </NeonGradientCard>
         </div>
-        <ResumeViewer opened={opened} close={close} />
       </div>
     </>
   );
