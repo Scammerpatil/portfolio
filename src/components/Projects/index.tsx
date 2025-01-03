@@ -10,7 +10,7 @@ const Projects = ({ projects }: { projects: ProjectData[] }) => {
   const [activeTab, setActiveTab] = useState(stacks[0]);
 
   return (
-    <div className="px-6 py-10 bg-base-100 font-mono md:px-20" id="Projects">
+    <div className="px-6 md:px-24 py-10 bg-base-100 font-mono" id="projects">
       <SectionTitle
         title="Masterstrokes 🎨"
         paragraph="Dive into my repertoire of ingenious creations and digital craftsmanship."

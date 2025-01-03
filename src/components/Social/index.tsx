@@ -19,7 +19,7 @@ const Social = () => {
   });
 
   return (
-    <div className="flex md-mx:hidden text-base-content items-center gap-8 fixed bottom-32 -left-48 rotate-90 ">
+    <div className="flex z-50 md-mx:hidden text-base-content items-center gap-8 fixed bottom-32 -left-48 rotate-90 ">
       <a
         href="https://www.freelancer.in/u/Scammerpatil?sb=t"
         target="_blank"
@@ -37,7 +37,7 @@ const Social = () => {
         </div>
       </a>
       {socialIcons}
-      <hr className="border w-40 rounded-full  bg-base-100 border-base-content" />
+      <hr className="border w-40 rounded-full bg-base-100 border-base-content" />
     </div>
   );
 };

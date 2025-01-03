@@ -7,32 +7,31 @@ import ThemeController from "./ThemeController";
 import SignInModel from "../Dialog/SignIn";
 
 const links = [
-  "About",
-  "Projects",
-  "Skills",
-  "Blog",
-  "Services",
-  "Experience",
-  "Contact",
+  { name: "About", href: "#about" },
+  { name: "Projects", href: "#projects" },
+  { name: "Skills", href: "#skills" },
+  { name: "Experience", href: "#experience" },
+  { name: "Testimonials", href: "#testimonials" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "Contact", href: "#contact" },
+  { name: "Services", href: "/services" },
 ];
 const navLinks = (col: boolean, clicked: (() => void) | null | undefined) => {
   const handleClick = () => {
     if (clicked) clicked();
   };
-  return links.map((link, index) => {
-    return (
-      <a
-        key={index}
-        onClick={handleClick}
-        className={`${
-          col ? "flex flex-col items-center" : ""
-        } text-base-content text-lg font-mono hover:text-primary`}
-        href={`#${link}`}
-      >
-        {link}
-      </a>
-    );
-  });
+  return links.map((link, index) => (
+    <a
+      key={index}
+      onClick={handleClick}
+      className={`${
+        col ? "flex flex-col items-center" : ""
+      } text-base-content text-lg font-mono hover:text-primary`}
+      href={link.href}
+    >
+      <span className="hover:underline">{link.name}</span>
+    </a>
+  ));
 };
 
 const Header = () => {

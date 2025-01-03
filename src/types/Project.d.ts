@@ -1,7 +1,8 @@
 export interface ProjectData {
+  _id?: string;
   title: string;
   desc: string;
-  image: string;
+  image: string | File;
   live: boolean;
   technologies: string[];
   link?: string;

@@ -1,9 +1,11 @@
 "use client";
-import "./../index.css";
+import "@/app/index.css";
 import "@mantine/core/styles.css";
 import { Toaster } from "react-hot-toast";
 import { ColorProvider } from "@/context/colorContext";
 import SideNav from "@/components/SideNav";
+import Loading from "@/components/Loading";
+import { UserProvider } from "@/context/userContext";
 
 export default function RootLayout({
   children,
@@ -22,10 +24,13 @@ export default function RootLayout({
         />
       </head>
       <body className={`antialiased bg-base-100`}>
-        <ColorProvider>
-          <Toaster />
-          <SideNav>{children}</SideNav>
-        </ColorProvider>
+        <UserProvider>
+          <ColorProvider>
+            <Toaster />
+            <Loading />
+            <SideNav>{children}</SideNav>
+          </ColorProvider>
+        </UserProvider>
       </body>
     </html>
   );

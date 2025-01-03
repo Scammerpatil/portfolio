@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   const { formData } = await req.json();
+  console.log(formData);
   if (
     formData.email === "sauravpatil453@gmail.com" &&
     formData.password === "Saudip@123"

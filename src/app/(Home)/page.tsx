@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-import Social from "@/components/Social/indes";
+import Social from "@/components/Social";
 import Mail from "@/components/Mail";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
@@ -67,10 +67,11 @@ const HomePage = () => {
           <Skills language={user.languages} />
           <Experience experience={user.experience} />
           <Testimonials testimonial={user.testimonials} />
+          {/* <Blogs/> */}
           <Contact />
           <Mail mail={user.email} />
           <Social />
-          <Footer visitorCount={user.visitorCount} name={user.name} />
+          <Footer visitorCount={user.visitorCount} />
           <ScrollUp />
         </>
       ) : (

@@ -73,7 +73,7 @@ const ExperienceModel = ({ experience }: { experience: Experience[] }) => {
   return (
     <div
       className="px-16 mx-20 md-mx:px-6 sm-mx:px-2 lg-mx:mx-0 my-10 mb-28 font-mono"
-      id="Experience"
+      id="experience"
     >
       <SectionTitle
         title="Battlefield Experience ⚔️"

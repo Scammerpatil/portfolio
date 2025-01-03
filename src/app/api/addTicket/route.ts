@@ -1,7 +1,6 @@
+import sendEmail from "@/middleware/ticketEmail";
 import Ticket from "@/models/Ticket";
 import { NextRequest, NextResponse } from "next/server";
-import ticketEmail from "@/middleware/ticketEmail";
-
 export async function POST(req: NextRequest) {
   const { name, email, message } = await req.json();
 
@@ -22,7 +21,7 @@ export async function POST(req: NextRequest) {
     const newTicket = await ticket.save();
 
     if (newTicket) {
-      await ticketEmail(email, name, message, newTicket);
+      await sendEmail(email, name, message, newTicket);
       return NextResponse.json(
         { message: "Ticket submitted successfully" },
         { status: 200 }
@@ -33,7 +32,8 @@ export async function POST(req: NextRequest) {
         { status: 500 }
       );
     }
-  } catch {
+  } catch (er) {
+    console.log(er);
     return NextResponse.json(
       { message: "An error occurred while submitting the ticket" },
       { status: 500 }

@@ -119,7 +119,9 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
           </div>
 
           {/* Main Content */}
-          <div className="flex-1 overflow-x-auto">{children}</div>
+          <div className="flex-1 overflow-y-auto max-h-[calc(100vh-72px)]">
+            {children}
+          </div>
         </div>
 
         {/* Sidebar */}
@@ -158,9 +160,9 @@ const MenuItem = ({ item }: { item: SideNavItem }) => {
   const toggleSubMenu = () => setSubMenuOpen(!subMenuOpen);
 
   const baseClasses =
-    "flex items-center gap-4 p-2 rounded-lg hover:bg-accent hover:text-accent-content";
+    "flex items-center gap-4 p-2 rounded-lg hover:bg-primary hover:text-primary-content";
   const activeClasses = "bg-base-300";
-  const inactiveClasses = "text-base-content hover:text-base-content";
+  const inactiveClasses = "text-base-content";
 
   return (
     <div>

@@ -17,6 +17,12 @@ const TestimonialMapping = ({
   testimonials: Testimonial[];
 }) => {
   const [active, setActive] = useState(0);
+  const emoticons = [
+    { name: "friend", emotion: "🧑‍🤝‍🧑" },
+    { name: "colleague", emoticon: "🤝" },
+    { name: "client", emoticon: "💼" },
+  ];
+  const [isPaused, setIsPaused] = useState(false);
 
   const handleNext = useCallback(() => {
     setActive((prev) => (prev + 1) % testimonials.length);
@@ -31,18 +37,22 @@ const TestimonialMapping = ({
   };
 
   useEffect(() => {
-    if (autoplay) {
+    if (autoplay && !isPaused) {
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay, handleNext]);
+  }, [autoplay, isPaused, handleNext]);
 
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
 
   return (
-    <div className="rounded-2xl text-base-content mx-auto antialiased font-sans md:px-8 lg:mx-36 py-14">
+    <div
+      className="rounded-2xl text-base-content mx-auto antialiased font-sans md:px-8 lg:mx-36 py-14"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10 mx-10">
         {/* Image Section */}
         <div>
@@ -104,7 +114,14 @@ const TestimonialMapping = ({
             exit={{ y: -20, opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
-            <h3 className="text-2xl font-bold">{testimonials[active].name}</h3>
+            <h3 className="text-2xl font-bold">
+              {testimonials[active].name}
+              {
+                emoticons.find(
+                  (e) => e.name === testimonials[active].designation
+                )?.emotion
+              }
+            </h3>
             <div className="my-2 flex items-center space-x-1">
               {Array.from({ length: testimonials[active].star }).map(
                 (_, index) => (

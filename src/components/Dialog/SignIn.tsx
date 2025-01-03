@@ -2,6 +2,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import Loading from "@/components/Loading";
 
 const SignInModel = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +12,9 @@ const SignInModel = () => {
   const router = useRouter();
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const response = axios.post("/api/signIn", { formData });
+    const response = axios.post("/api/auth/signIn", { formData });
+    (document.getElementById("signin") as HTMLDialogElement).close();
+    <Loading />;
     toast.promise(response, {
       loading: "Signing In...",
       success: () => {
@@ -25,7 +28,12 @@ const SignInModel = () => {
     <dialog id="signin" className="modal">
       <div className="modal-box">
         <form method="dialog text-center p-10">
-          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+          <button
+            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-base-content"
+            onClick={() =>
+              (document.getElementById("signin") as HTMLDialogElement).close()
+            }
+          >
             ✕
           </button>
           <h1 className="text-2xl font-bold text-base-content">Sign In</h1>

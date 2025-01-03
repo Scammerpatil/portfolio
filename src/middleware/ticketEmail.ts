@@ -17,13 +17,28 @@ const sendEmail = async (
   message: string,
   ticket: TicketInterface
 ) => {
-  const emailTemplate = fs.readFileSync("src/helper/ticketEmail.ejs", "utf-8");
-  const mailOptions = {
-    from: process.env.EMAIL,
-    to: email,
-    subject: "Ticket Created",
-    html: ejs.render(emailTemplate, { name, message, ticket }),
-  };
-  await transporter.sendMail(mailOptions);
+  try {
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      throw new Error("Invalid recipient email address");
+    }
+
+    console.log(email, name, message, ticket);
+
+    // Read the email template
+    const emailTemplate = fs.readFileSync(
+      "src/helper/ticketEmail.ejs",
+      "utf-8"
+    );
+    const mailOptions = {
+      from: process.env.EMAIL,
+      to: email,
+      subject: "Ticket Created",
+      html: ejs.render(emailTemplate, { name, message, ticket }),
+    };
+    await transporter.sendMail(mailOptions);
+  } catch (error) {
+    return error;
+  }
 };
+
 export default sendEmail;

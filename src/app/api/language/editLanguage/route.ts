@@ -4,32 +4,34 @@ import { NextRequest, NextResponse } from "next/server";
 
 dbConfig();
 
-export async function POST(req: NextRequest) {
+export async function PUT(req: NextRequest) {
   const { title, skills } = await req.json();
+  console.log(title, skills);
+  if (!title || !skills) {
+    return NextResponse.json(
+      { message: "Title and skills are required" },
+      { status: 400 }
+    );
+  }
   try {
     const existingLanguage = await Language.findOne({ title });
     if (existingLanguage) {
-      existingLanguage.skills.push(...skills);
+      existingLanguage.skills = skills;
       await existingLanguage.save();
       return NextResponse.json(
-        { message: "Language added successfully" },
-        { status: 201 }
+        { message: "Language updated successfully" },
+        { status: 200 }
       );
     } else {
-      const newLanguage = new Language({
-        title,
-        skills,
-      });
-      await newLanguage.save();
       return NextResponse.json(
-        { message: "Language added successfully" },
-        { status: 201 }
+        { message: "Language not found" },
+        { status: 404 }
       );
     }
   } catch (error: unknown) {
     console.log(error);
     return NextResponse.json(
-      { message: "Something went wrong" },
+      { message: "Failed to update language" },
       { status: 500 }
     );
   }

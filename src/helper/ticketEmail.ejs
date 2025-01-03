@@ -4,65 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticket Received</title>
+    <title>Ticket Received 🎉</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            background-color: #2e0249;
+            color: #f3e8ff;
             margin: 0;
             padding: 0;
         }
 
         .container {
             max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            padding: 25px;
+            background: linear-gradient(135deg, #570df8, #f87272);
+            border-radius: 16px;
+            color: #f3e8ff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .header {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
-            color: #333;
             text-align: center;
+            color: #ffedd5;
         }
 
         .content {
             font-size: 16px;
-            line-height: 1.5;
+            line-height: 1.8;
             margin: 20px 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .content ul {
+            padding-left: 20px;
+            list-style: none;
+        }
+
+        .content li::before {
+            content: '🌟';
+            margin-right: 8px;
+        }
+
+        .content p {
+            margin: 10px 0;
         }
 
         .footer {
             text-align: center;
             margin-top: 20px;
             font-size: 14px;
-            color: #666;
+            color: #ffedd5;
+        }
+
+        .footer a {
+            color: #fde047;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="header">Ticket Received</div>
+        <div class="header">🎫 Ticket Received! 🎉</div>
         <div class="content">
-            <p>Dear <%= name %>,</p>
-            <p>Thank you for reaching out to us! We have received your ticket and a member of our support team will get
-                back to you as soon as possible.</p>
-            <p>Here are the details of your ticket:</p>
+            <p>Hey <%= name %>,</p>
+            <p>Thanks for trusting <strong>me</strong> (yes, that is me!) with your support needs. 😊</p>
+            <p>Here's what you shared:</p>
             <ul>
                 <li><strong>Message:</strong>
                     <%= ticket.message %>
                 </li>
             </ul>
-            <p>If you have any additional information or questions, feel free to reply to this email.</p>
-            <p>Best regards,<br>Your Support Team</p>
+            <p>Don't worry, I (that is me again!) am already on it and will respond ASAP! 🚀</p>
+            <p>Until then, why not check out more about me?</p>
+            <p>Cheers, <br>That is me (again!) ✌️,<br><strong>ScammerPatil</strong></p>
         </div>
         <div class="footer">
-            <p>&copy; <%= new Date().getFullYear() %> Your Company Name. All rights reserved.</p>
+            <p>Made with ❤️ and a sprinkle of funk by ScammerPatil.</p>
+            <p>Visit my portfolio: <a href="https://scammerpatil.vercel.app/">ScammerPatil</a></p>
         </div>
     </div>
 </body>

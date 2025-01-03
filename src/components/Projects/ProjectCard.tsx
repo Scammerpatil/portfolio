@@ -1,6 +1,5 @@
 import {
   Badge,
-  Button,
   Card,
   Group,
   Image,
@@ -28,7 +27,7 @@ const ProjectCard = (props: ProjectData) => {
     >
       <Card
         onClick={open}
-        className="!bg-base-300 cursor-pointer transition-transform duration-300 ease-in-out hover:!scale-[1.02] mb-5 hover:!shadow-[0_0_10px_1px_#64FFDA80] xs-mx:!shadow-[0_0_10px_1px_#64FFDA80] !border-primary border-2"
+        className="!bg-base-300 cursor-pointer transition-transform duration-300 ease-in-out hover:!scale-[1.02] mb-5 hover:!shadow-md shadow-primary !border-primary border-2"
         shadow="lg"
         padding="sm"
         radius="lg"
@@ -38,7 +37,7 @@ const ProjectCard = (props: ProjectData) => {
           <Image
             className="!rounded-xl !shadow-[0_0_5px_0_#64FFDA]"
             src={props.image}
-            alt={props.image}
+            alt={props.image.toString()}
           />
         </Card.Section>
 
@@ -69,38 +68,34 @@ const ProjectCard = (props: ProjectData) => {
           {props.technologies.map(
             (tech: string, index: number) =>
               index < 3 && (
-                <Badge key={index} size={badge} variant="light" color={color}>
+                <Badge key={index} size={badge} variant="filled" color={color}>
                   {tech}
                 </Badge>
               )
           )}
         </Group>
         <Text
-          className="!text-justify !text-sm xs-mx:!text-xs"
+          className="!text-justify text-base-content/80 !text-sm xs-mx:!text-xs"
           lineClamp={5}
           size="sm"
-          c="dimmed"
         >
           {props.desc}
         </Text>
 
-        <Button
+        <button
           onClick={open}
-          className=""
+          className="btn btn-primary btn-outline rounded-xl text-primary-content mt-3"
           color={color}
-          variant="outline"
-          mt="md"
-          radius="md"
         >
           Show More
-        </Button>
+        </button>
       </Card>
       <FullProjectModal
         opened={opened}
         close={close}
         title={props.title}
         desc={props.desc}
-        image={props.image}
+        image={props.image.toString()}
         live={props.live}
         link={props.link}
         github={props.github}

@@ -18,6 +18,14 @@ const Testimonials = ({ testimonial }: { testimonial: Testimonial[] }) => {
     star: 0,
   });
 
+  const shuffleArray = (array: Testimonial[]) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
@@ -56,19 +64,25 @@ const Testimonials = ({ testimonial }: { testimonial: Testimonial[] }) => {
   };
 
   return (
-    <section className="relative bg-base-300 py-16 md:py-20 lg:py-28">
+    <section
+      className="relative bg-base-300 py-16 md:py-20 lg:py-28"
+      id="testimonials"
+    >
       <SectionTitle
         title="Raving Reviews & Wild Compliments 🚀"
         paragraph="Hear the buzz from my amazing clients and collaborators! Spoiler: They love working with me (and you will too)."
       />
 
       <div className="w-full mx-auto">
-        <TestimonialMapping autoplay={true} testimonials={testimonial} />
+        <TestimonialMapping
+          autoplay={true}
+          testimonials={shuffleArray([...testimonial])}
+        />
       </div>
 
       <div className="w-full flex justify-center items-center">
         <button
-          className="btn btn-accent btn-outline text-base-300 mt-8"
+          className="btn btn-primary btn-outline text-base-300 mt-8"
           onClick={() =>
             (
               document.getElementById("newReview") as HTMLDialogElement
@@ -213,7 +227,7 @@ const Testimonials = ({ testimonial }: { testimonial: Testimonial[] }) => {
       >
         <div className="modal-box bg-base-300 rounded-lg shadow-lg">
           <button
-            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-base-content"
             onClick={() =>
               (
                 document.getElementById("newReview") as HTMLDialogElement
@@ -262,7 +276,7 @@ const Testimonials = ({ testimonial }: { testimonial: Testimonial[] }) => {
                 type="email"
                 name="email"
                 placeholder="Enter your email"
-                className="input input-bordered w-full"
+                className="input input-bordered w-full text-base-content"
                 value={formData.email}
                 onChange={handleChange}
                 required

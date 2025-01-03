@@ -116,7 +116,7 @@ const Contact = () => {
                 </div>
                 <div className="w-full mx-auto px-4">
                   <button
-                    className="rounded-sm bg-accent px-9 py-4 text-accent-content font-medium shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+                    className="rounded-sm bg-primary px-9 py-4 text-primary-content font-medium shadow-submit duration-300 hover:bg-accent/90 hover:text-accent-content"
                     onClick={handleSubmit}
                   >
                     Submit Ticket

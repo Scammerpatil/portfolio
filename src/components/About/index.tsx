@@ -1,5 +1,5 @@
 import Typewriter from "typewriter-effect";
-import { IconDownload } from "@tabler/icons-react";
+import { IconBrandGithub, IconDownload } from "@tabler/icons-react";
 import Particles from "./Particles";
 import { NeonGradientCard } from "./neon-gradient-card";
 import Image from "next/image";
@@ -21,7 +21,7 @@ const About = ({
         data-aos="zoom-out-up"
         data-aos-duration="800"
         className="bg-base-300 flex flex-col lg:flex-row relative overflow-hidden justify-center lg:justify-around items-center font-mono pt-20 px-6 md:px-10 py-10 md:py-16 lg:py-32 min-h-screen gap-6 sm-mx:flex-col-reverse aos-init aos-animate"
-        id="About"
+        id="about"
       >
         <Particles
           className="absolute top-5 -z-20 inset-0 min-h-screen text-primary"
@@ -50,16 +50,19 @@ const About = ({
           <div className="text-base-content text-xl text-justify my-8 lg-mx:my-0 font-semibold lg-mx:text-sm">
             {bio}
           </div>
-          <div className="xs-mx:w-[90%] flex gap-3 xs-mx:justify-between">
-            <button className="btn btn-secondary text-secondary-content text-base lg:text-lg">
-              Check Resume
-            </button>
+          <div className="flex gap-3 flex-col md:flex-row">
+            <a
+              className="btn btn-secondary text-secondary-content text-base lg:text-lg"
+              href="https://github.com/scammerpatil"
+            >
+              Check My GitHub <IconBrandGithub size={24} />
+            </a>
             <a
               href="/Saurav Deepak Patil_Computer_Engineering.pdf"
               download="Saurav Deepak Patil_Computer_Engineering"
               className="btn btn-primary text-primary-content text-base lg:text-lg"
             >
-              Download <IconDownload size={20} />
+              Download My Resume <IconDownload size={20} />
             </a>
           </div>
         </div>

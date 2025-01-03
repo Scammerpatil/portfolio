@@ -6,13 +6,19 @@ const LanguageModel = new Schema({
     required: true,
     unique: true,
     enum: [
-      "Frontend",
-      "Backend",
-      "Database",
-      "Languages",
-      "Tools",
-      "AI/ML Frameworks",
+      "Frontend Finesse 🎨",
+      "Backend Brilliance ⚙️",
+      "Database Dominance 🗃️",
+      "Language Loadout 💻",
+      "Tool Trove 🧰",
+      "AI/ML Arsenal 🤖",
+      "Framework Forcefield 🚀",
+      "App Crafting 🚀",
     ],
+  },
+  description: {
+    type: String,
+    required: true,
   },
   skills: [
     {
