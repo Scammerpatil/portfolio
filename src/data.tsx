@@ -1,0 +1,72 @@
+import {
+  IconBrandGithub,
+  IconBrandInstagram,
+  IconBrandLeetcode,
+  IconBrandLinkedin,
+  IconBrandYoutube,
+} from "@tabler/icons-react";
+
+const socialLinks = [
+  { link: "https://github.com/scammerpatil", icon: IconBrandGithub },
+  {
+    link: "https://www.linkedin.com/in/scammerpatil",
+    icon: IconBrandLinkedin,
+  },
+  {
+    link: "https://www.instagram.com/its_sauravpatil",
+    icon: IconBrandInstagram,
+  },
+  {
+    link: "https://www.youtube.com/channel/UCgG8-dXbH11vxMbImGaIRmQ",
+    icon: IconBrandYoutube,
+  },
+  { link: "https://www.leetcode.com/u/scammerpatil", icon: IconBrandLeetcode },
+];
+
+const Slugs = [
+  "java",
+  "c",
+  "cplusplus",
+  "javascript",
+  "typescript",
+  "python",
+  "mysql",
+  "mongodb",
+  "html5",
+  "css3",
+  "react",
+  "redux",
+  "nodedotjs",
+  "express",
+  "spring",
+  "springboot",
+  "nextdotjs",
+  "bootstrap",
+  "tailwindcss",
+  "materialui",
+  "chakraui",
+  "daisyui",
+  "tensorflow",
+  "keras",
+  "scikit-learn",
+  "numpy",
+  "pandas",
+  "openai",
+  "pytorch",
+  "git",
+  "github",
+  "npm",
+  "postman",
+  "fastapi",
+  "docker",
+  "vercel",
+  "jira",
+  "eclipseide",
+  "intellijidea",
+  "androidstudio",
+  "jupyter",
+  "googlecloud",
+  "figma",
+];
+
+export { socialLinks, Slugs };

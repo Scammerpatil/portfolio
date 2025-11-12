@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: dark;">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💼 Service Request Received — ScammerPatil</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    :root {
+      --color-base-100: oklch(22% .019 237.69);
+      --color-base-200: oklch(20% .019 237.69);
+      --color-base-300: oklch(18% .019 237.69);
+      --color-base-content: oklch(77.383% .043 245.096);
+      --color-primary: oklch(74.703% .158 39.947);
+      --color-primary-content: oklch(14.94% .031 39.947);
+      --color-secondary: oklch(72.537% .177 2.72);
+      --color-secondary-content: oklch(14.507% .035 2.72);
+      --color-accent: oklch(71.294% .166 299.844);
+      --color-accent-content: oklch(14.258% .033 299.844);
+      --color-neutral: oklch(26% .019 237.69);
+      --color-neutral-content: oklch(70% .019 237.69);
+      --radius-box: 1rem;
+      --radius-field: .5rem;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-base-100);
+      color: var(--color-base-content);
+      margin: 0;
+      padding: 0;
+    }
+
+    .email-wrapper {
+      max-width: 650px;
+      margin: 40px auto;
+      background: var(--color-base-200);
+      border-radius: var(--radius-box);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+      border: 1px solid var(--color-base-300);
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--color-primary-content);
+    }
+
+    .header img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      padding: 25px 30px;
+      line-height: 1.8;
+      color: var(--color-base-content);
+    }
+
+    .content h2 {
+      color: var(--color-primary);
+      font-size: 22px;
+      margin-top: 0;
+    }
+
+    .content ul {
+      list-style: none;
+      padding-left: 0;
+      background-color: var(--color-base-300);
+      border-radius: var(--radius-field);
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-left: 5px solid var(--color-primary);
+    }
+
+    .content li {
+      margin-bottom: 10px;
+    }
+
+    .content li::before {
+      content: '💡';
+      margin-right: 8px;
+    }
+
+    .footer {
+      text-align: center;
+      background-color: var(--color-base-300);
+      padding: 20px;
+      font-size: 13px;
+      color: var(--color-neutral-content);
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="email-wrapper">
+    <div class="header">
+      <img src="https://iili.io/Kp0BvdF.png" alt="Logo" />
+      <h1>💼 Service Request Received!</h1>
+      <p>Hey <strong>
+          <%= name %>
+        </strong> 👋</p>
+    </div>
+
+    <div class="content">
+      <h2>Thanks for Reaching Out 🚀</h2>
+      <p>
+        Thank you for submitting your project request to <strong>ScammerPatil</strong>!
+        I’m genuinely excited to explore your idea and will get back to you very soon.
+      </p>
+
+      <p>Here’s a quick snapshot of your submission:</p>
+      <ul>
+        <li><strong>Project Title:</strong>
+          <%= request.projectTitle %>
+        </li>
+        <li><strong>Description:</strong>
+          <%= request.projectDescription %>
+        </li>
+        <li><strong>Preferred Technologies:</strong>
+          <%= request.preferredTechnologies %>
+        </li>
+        <li><strong>Deadline:</strong>
+          <%= request.deadline || "Not specified" %>
+        </li>
+        <li><strong>Budget:</strong>
+          <%= request.budget || "Flexible" %>
+        </li>
+      </ul>
+
+      <p>
+        You’ll receive another update once I’ve reviewed your request in detail.
+        In the meantime, sit back, grab a coffee ☕, and get ready to see your vision come to life.
+      </p>
+
+      <p>
+        Cheers,<br />
+        <strong>ScammerPatil</strong> ✨<br />
+        <span style="font-size: 14px;">MERN Stack Developer | Tech Aficionado</span>
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>Made with 💜 & creativity by ScammerPatil.</p>
+      <p>
+        🌐 <a href="https://scammerpatil.vercel.app/" target="_blank">Portfolio</a> •
+        💼 <a href="https://linkedin.com/in/sauravdeepakpatil" target="_blank">LinkedIn</a> •
+        🧠 <a href="https://github.com/ScammerPatil" target="_blank">GitHub</a>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

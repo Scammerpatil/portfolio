@@ -1,0 +1,48 @@
+{
+  "name": "personal-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@tabler/icons-react": "^3.35.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "aos": "^2.3.4",
+    "axios": "^1.13.1",
+    "clsx": "^2.1.1",
+    "colorjs.io": "^0.5.2",
+    "ejs": "^3.1.10",
+    "framer-motion": "^12.23.24",
+    "mongoose": "^8.19.2",
+    "motion": "^12.23.24",
+    "next": "15.5.0",
+    "nodemailer": "^7.0.10",
+    "react": "19.1.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "19.1.0",
+    "react-hot-toast": "^2.6.0",
+    "react-icon-cloud": "^4.1.7",
+    "recharts": "^3.3.0",
+    "tailwind-merge": "^3.3.1",
+    "typewriter-effect": "^2.22.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.1.16",
+    "@types/aos": "^3.0.7",
+    "@types/ejs": "^3.1.5",
+    "@types/node": "^20.19.24",
+    "@types/nodemailer": "^7.0.3",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "daisyui": "^5.3.10",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "15.5.0",
+    "tailwindcss": "^4.1.16",
+    "typescript": "^5.9.3"
+  }
+}
