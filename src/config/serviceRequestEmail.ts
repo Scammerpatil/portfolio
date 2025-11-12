@@ -18,7 +18,7 @@ const sendServiceRequestEmail = async (
 ) => {
   try {
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      throw new Error("Invalid recipient email address");
+      return;
     }
 
     const emailTemplate = fs.readFileSync(
@@ -31,7 +31,17 @@ const sendServiceRequestEmail = async (
       subject: "Service Request Received",
       html: ejs.render(emailTemplate, { name, request }),
     };
-    await transporter.sendMail(mailOptions);
+    const res = await transporter.sendMail(mailOptions);
+    console.log("Email sent: " + res.response);
+    // Send mail to self as well
+    const selfMailOptions = {
+      from: process.env.EMAIL,
+      to: process.env.EMAIL,
+      subject: "New Service Request Submitted",
+      html: ejs.render(emailTemplate, { name, request }),
+    };
+    const selfRes = await transporter.sendMail(selfMailOptions);
+    console.log("Self email sent: " + selfRes.response);
   } catch (error) {
     return error;
   }

@@ -136,9 +136,9 @@ const ManageProjectsPage = () => {
     <>
       <Title title="Projects Management" subTitle="Manage your projects." />
       <div className="px-6 mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-6">
           {/* Project Name */}
-          <fieldset className="fieldset">
+          <fieldset className="fieldset col-span-3 md:col-span-1">
             <legend className="fieldset-legend">
               Project Name <span className="text-error">*</span>
             </legend>
@@ -153,7 +153,7 @@ const ManageProjectsPage = () => {
             />
           </fieldset>
           {/* Project Title */}
-          <fieldset className="fieldset">
+          <fieldset className="fieldset col-span-3 md:col-span-1">
             <legend className="fieldset-legend">
               Project Title <span className="text-error">*</span>
             </legend>
@@ -174,7 +174,7 @@ const ManageProjectsPage = () => {
             />
           </fieldset>
           {/* Project Slug */}
-          <fieldset className="fieldset">
+          <fieldset className="fieldset col-span-3 md:col-span-1">
             <legend className="fieldset-legend">
               Project Slug <span className="text-error">*</span>
             </legend>
@@ -201,7 +201,7 @@ const ManageProjectsPage = () => {
             />
           </fieldset>
           {/* Project Industry */}
-          <fieldset className="fieldset">
+          <fieldset className="fieldset col-span-3 md:col-span-1">
             <legend className="fieldset-legend">
               Project Industry <span className="text-error">*</span>
             </legend>
@@ -212,9 +212,7 @@ const ManageProjectsPage = () => {
                 setNewProject((prev) => ({ ...prev, industry: e.target.value }))
               }
             >
-              <option value="" disabled>
-                Select Industry
-              </option>
+              <option value="">Select Industry</option>
               {industries.map((industry) => (
                 <option key={industry} value={industry}>
                   {industry}
@@ -223,7 +221,7 @@ const ManageProjectsPage = () => {
             </select>
           </fieldset>
           {/* Project Banner Image */}
-          <fieldset className="fieldset">
+          <fieldset className="fieldset col-span-3 md:col-span-1">
             <legend className="fieldset-legend">
               Project Banner Image <span className="text-error">*</span>
             </legend>
@@ -237,7 +235,7 @@ const ManageProjectsPage = () => {
             />
           </fieldset>
           {/* Project Images */}
-          <fieldset className="fieldset">
+          <fieldset className="fieldset col-span-3 md:col-span-1">
             <legend className="fieldset-legend">
               Project Images <span className="text-error">*</span>
             </legend>
@@ -253,7 +251,7 @@ const ManageProjectsPage = () => {
           </fieldset>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 col-span-3">
             {/* Project Challenge */}
-            <fieldset className="fieldset">
+            <fieldset className="fieldset col-span-3 md:col-span-1">
               <legend className="fieldset-legend">
                 Project Challenge <span className="text-error">*</span>
               </legend>
@@ -270,7 +268,7 @@ const ManageProjectsPage = () => {
               />
             </fieldset>
             {/* Project Solution */}
-            <fieldset className="fieldset">
+            <fieldset className="fieldset col-span-3 md:col-span-1">
               <legend className="fieldset-legend">
                 Project Solution <span className="text-error">*</span>
               </legend>
@@ -288,7 +286,7 @@ const ManageProjectsPage = () => {
             </fieldset>
           </div>
           {/* Is Project Live */}
-          <fieldset className="fieldset">
+          <fieldset className="fieldset col-span-3 md:col-span-1">
             <legend className="fieldset-legend">
               Is the project live? <span className="text-error">*</span>
             </legend>
@@ -303,7 +301,7 @@ const ManageProjectsPage = () => {
             />
           </fieldset>
           {/* Github Repo */}
-          <fieldset className="fieldset">
+          <fieldset className="fieldset col-span-3 md:col-span-1">
             <legend className="fieldset-legend">
               Github Repository <span className="text-error">*</span>
             </legend>
@@ -318,7 +316,7 @@ const ManageProjectsPage = () => {
             />
           </fieldset>
           {/* Stack Type */}
-          <fieldset className="fieldset">
+          <fieldset className="fieldset col-span-3 md:col-span-1">
             <legend className="fieldset-legend">
               Tech Stack <span className="text-error">*</span>
             </legend>
@@ -329,9 +327,7 @@ const ManageProjectsPage = () => {
               }
               className="select select-primary w-full"
             >
-              <option value="" disabled>
-                Choose a stack
-              </option>
+              <option value="">Choose a stack</option>
               {[
                 "MERN Magic ✨",
                 "MEAN Machine 💻",
@@ -435,7 +431,7 @@ const ManageProjectsPage = () => {
           {newProject.technologies?.length === 0 ? (
             <p>No technologies selected.</p>
           ) : (
-            <div className="mb-4 text-lg">
+            <div className="mb-4 text-base py-4 bg-primary/10 rounded-lg px-3">
               <strong>Selected Technologies:</strong>{" "}
               {Object.entries(technologies)
                 .flatMap(([stack, techList]) =>

@@ -79,7 +79,41 @@ export default function Services() {
       });
       toast.promise(response, {
         loading: "Submitting your request...",
-        success: "Your request has been submitted successfully!",
+        success: () => {
+          setForm({
+            fullName: "",
+            email: "",
+            contactNumber: "",
+            preferredCommunication: "" as
+              | "Email"
+              | "Phone"
+              | "WhatsApp"
+              | "Other",
+            projectTitle: "",
+            projectDescription: "",
+            projectPurpose: "",
+            deadline: "",
+            preferredTechnologies: [],
+            expectedFeatures: "",
+            educationalField: "",
+            guidelines: "",
+            projectComplexity: "Basic" as "Basic" | "Intermediate" | "Advanced",
+            designPreferences: "",
+            referenceProject: "",
+            budget: "",
+            paymentMethod: "UPI" as
+              | "UPI"
+              | "Bank Transfer"
+              | "PayPal"
+              | "Other",
+            additionalInfo: "",
+            termsAccepted: false,
+            activelyInvolved: false,
+            regularUpdates: false,
+            portfolioAuthorization: true,
+          });
+          return "Service request submitted successfully! I'll reach out soon.";
+        },
         error: (err) => {
           return err.response?.data?.message || "Failed to submit the form.";
         },
@@ -154,7 +188,7 @@ export default function Services() {
             <Title title="📇 Your Information" />
             <div className="grid md:grid-cols-2 gap-3 lg:gap-0 lg:space-x-6">
               {/* Full Name */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   👤 Full Name <span className="text-error">*</span>
                 </legend>
@@ -169,7 +203,7 @@ export default function Services() {
                 />
               </fieldset>
               {/* Contact Email */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   📧 Email Address <span className="text-error">*</span>
                 </legend>
@@ -184,7 +218,7 @@ export default function Services() {
                 />
               </fieldset>
               {/* Contact Number */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   📞 Contact Number <span className="text-error">*</span>
                 </legend>
@@ -198,7 +232,7 @@ export default function Services() {
                 />
               </fieldset>
               {/* Preferred Communication */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   💬 Preferred Communication
                 </legend>
@@ -257,7 +291,7 @@ export default function Services() {
                   name="projectPurpose"
                   value={form.projectPurpose}
                   onChange={handleChange}
-                  className="input rounded-md border border-base-300 bg-base-200 px-4 py-3 text-base text-base-content focus:border-primary focus:outline-none w-full"
+                  className="select rounded-md border border-base-300 bg-base-200 px-4 py-3 text-base text-base-content focus:border-primary focus:outline-none w-full"
                 >
                   <option value="">
                     Portfolio, research, commercial use, etc.
@@ -285,7 +319,7 @@ export default function Services() {
             <Title title="🎯 Preferences" />
             <div className="grid md:grid-cols-2 gap-3 lg:gap-0 lg:space-x-6">
               {/* Preferred Technologies */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">💡 Preferred Tech</legend>
                 <input
                   type="text"
@@ -304,7 +338,7 @@ export default function Services() {
                 />
               </fieldset>
               {/* Expected Features */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   🚀 Expected Features
                 </legend>
@@ -318,7 +352,7 @@ export default function Services() {
                 />
               </fieldset>
               {/* Educational Field */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   🎓 Educational Field
                 </legend>
@@ -345,7 +379,7 @@ export default function Services() {
                 </select>
               </fieldset>
               {/* Project Complexity */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">📊 Complexity Level</legend>
                 <select
                   name="projectComplexity"
@@ -360,7 +394,7 @@ export default function Services() {
                 </select>
               </fieldset>
 
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   🎨 Design Preferences
                 </legend>
@@ -374,7 +408,7 @@ export default function Services() {
                 />
               </fieldset>
 
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   🔗 Reference Project
                 </legend>
@@ -388,7 +422,7 @@ export default function Services() {
                 />
               </fieldset>
 
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">💵 Budget</legend>
                 <input
                   type="text"
@@ -400,7 +434,7 @@ export default function Services() {
                 />
               </fieldset>
 
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">💳 Payment Method</legend>
                 <select
                   name="paymentMethod"

@@ -34,7 +34,7 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
       <div className="drawer lg:drawer-open max-h-screen">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
-          <div className="navbar justify-between bg-base-300 w-full pl-10">
+          <div className="navbar justify-between bg-base-300 w-full lg:pl-10">
             <div className="lg:flex items-center justify-end space-x-2 hidden text-base-content">
               <span className="text-base font-semibold">Home</span>
               {pathSegments.map((segment, index) => (
@@ -58,16 +58,15 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
               </label>
             </div>
 
-            <div className="navbar lg:hidden px-2">
+            <div className="navbar lg:hidden">
               <Link
                 href={`/admin/dashboard`}
                 className="navbar-start text-xl font-bold flex items-center"
               >
-                <span className="h-7 w-7 ">
+                <span className="h-7 w-7 mr-2">
                   <IconCertificate size={28} className="text-base-content" />
                 </span>
-                <span className="text-primary">Personal</span>
-                <span className="text-secondary">Portfolio</span>
+                ScammerPatil
               </Link>
               <div className="navbar-end space-x-4">
                 <ThemeToggler />
@@ -188,10 +187,7 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
                 <IconCertificate size={28} className="text-base-content" />
               </span>
               <span className="text-xl font-bold text-base-content">
-                <h1 className="text-xl font-bold">
-                  <span className="text-primary">Personal</span>
-                  <span className="text-secondary">Portfolio</span>
-                </h1>
+                <h1 className="text-xl font-bold">ScammerPatil</h1>
               </span>
             </Link>
             <div className="flex flex-col space-y-2 mt-10 md:px-6">

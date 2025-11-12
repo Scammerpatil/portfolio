@@ -19,7 +19,7 @@ const sendEmail = async (
 ) => {
   try {
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      throw new Error("Invalid recipient email address");
+      return;
     }
 
     const emailTemplate = fs.readFileSync(
@@ -32,7 +32,8 @@ const sendEmail = async (
       subject: "Ticket Created",
       html: ejs.render(emailTemplate, { name, message, ticket }),
     };
-    await transporter.sendMail(mailOptions);
+    const res = await transporter.sendMail(mailOptions);
+    console.log("Email sent: " + res.response);
   } catch (error) {
     return error;
   }

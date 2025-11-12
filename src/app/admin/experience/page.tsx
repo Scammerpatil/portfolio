@@ -90,7 +90,7 @@ export default function ExperiencePage() {
       />
       {/* Add New Experience */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-10 py-4">
-        <fieldset className="fieldset">
+        <fieldset className="fieldset col-span-3 md:col-span-1">
           <legend className="legend">
             Role <span className="text-error">*</span>
           </legend>
@@ -105,7 +105,7 @@ export default function ExperiencePage() {
             }
           />
         </fieldset>
-        <fieldset className="fieldset">
+        <fieldset className="fieldset col-span-3 md:col-span-1">
           <legend className="legend">
             Company <span className="text-error">*</span>
           </legend>
@@ -120,7 +120,7 @@ export default function ExperiencePage() {
             }
           />
         </fieldset>
-        <fieldset className="fieldset">
+        <fieldset className="fieldset col-span-3 md:col-span-1">
           <legend className="legend">
             Company Official Website URL <span className="text-error">*</span>
           </legend>
@@ -135,7 +135,7 @@ export default function ExperiencePage() {
             }
           />
         </fieldset>
-        <fieldset className="fieldset">
+        <fieldset className="fieldset col-span-3 md:col-span-1">
           <legend className="legend">
             Start Date <span className="text-error">*</span>
           </legend>
@@ -155,7 +155,7 @@ export default function ExperiencePage() {
             }
           />
         </fieldset>
-        <fieldset className="fieldset">
+        <fieldset className="fieldset col-span-3 md:col-span-1">
           <legend className="legend">End Date</legend>
           <input
             type="date"
@@ -173,7 +173,7 @@ export default function ExperiencePage() {
           />
         </fieldset>
         {/* Image */}
-        <fieldset className="fieldset">
+        <fieldset className="fieldset col-span-3 md:col-span-1">
           <legend className="legend">
             Image <span className="text-error">*</span>
           </legend>

@@ -193,13 +193,13 @@ export default function TestimonialsPage() {
           <h3 className="font-bold text-2xl text-primary text-center py-2">
             Edit Testimonial
           </h3>
-          <div className="px-10 py-5 mx-auto bg-base-200 rounded-lg">
+          <div className="px-2 lg:px-10 py-5 mx-auto bg-base-200 rounded-lg">
             <h1 className="border-b text-lg font-bold mb-4">
               Testimonial Details
             </h1>
             <div className="grid grid-cols-2 gap-4 my-4">
               {/* Testimonial Name */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   Name <span className="text-error">*</span>{" "}
                 </legend>
@@ -217,7 +217,7 @@ export default function TestimonialsPage() {
                 />
               </fieldset>
               {/*Testimonial Contact Email  */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   Email <span className="text-error">*</span>{" "}
                 </legend>
@@ -235,7 +235,7 @@ export default function TestimonialsPage() {
                 />
               </fieldset>
               {/* Testimonial LinkedIn */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   LinkedIn <span className="text-error">*</span>{" "}
                 </legend>
@@ -253,7 +253,7 @@ export default function TestimonialsPage() {
                 />
               </fieldset>
               {/* Testimonial Designation */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   Designation <span className="text-error">*</span>{" "}
                 </legend>
@@ -283,7 +283,7 @@ export default function TestimonialsPage() {
                 </select>
               </fieldset>
               {/* Testimonial Content */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   Review Content <span className="text-error">*</span>{" "}
                 </legend>
@@ -301,7 +301,7 @@ export default function TestimonialsPage() {
                 />
               </fieldset>
               {/* Testimonial Current Employer */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   Current Employer <span className="text-error">*</span>{" "}
                 </legend>
@@ -319,7 +319,7 @@ export default function TestimonialsPage() {
                 />
               </fieldset>
               {/* Testimonial Current Position */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   Current Position <span className="text-error">*</span>{" "}
                 </legend>
@@ -337,7 +337,7 @@ export default function TestimonialsPage() {
                 />
               </fieldset>
               {/* Star Rating */}
-              <fieldset className="fieldset">
+              <fieldset className="fieldset col-span-2 md:col-span-1">
                 <legend className="fieldset-legend">
                   Star Rating <span className="text-error">*</span>{" "}
                 </legend>

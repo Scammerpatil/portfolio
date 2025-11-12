@@ -7,7 +7,7 @@ export default function Title({
 }) {
   return (
     <div className="mb-8 bg-base-200/80 py-6">
-      <h1 className="font-bold text-3xl mb-2 text-center uppercase w-full">
+      <h1 className="font-bold text-2xl lg:text-3xl mb-2 text-center uppercase w-full">
         ⭐ {title} ⭐
       </h1>
       {subTitle && (

@@ -41,7 +41,7 @@ const AboutPage = () => {
         subTitle="Manage your about me details."
       />
       <div className="mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-6">
           <fieldset className="fieldset">
             <legend className="fieldset-legend text-base capitalize">
               My Name <span className="text-error">*</span>
@@ -115,7 +115,7 @@ const AboutPage = () => {
           </fieldset>
         </div>
 
-        <div className="mt-8 flex justify-between">
+        <div className="mt-8">
           {!isEditing ? (
             <button
               className="btn btn-primary mx-auto w-full"
@@ -124,20 +124,20 @@ const AboutPage = () => {
               Edit Profile
             </button>
           ) : (
-            <button className={`btn btn-success`} onClick={handleSave}>
-              Save Changes
-            </button>
-          )}
-          {isEditing && (
-            <button
-              className="btn btn-error w-full"
-              onClick={() => {
-                setNewUser(user);
-                setIsEditing(false);
-              }}
-            >
-              Cancel
-            </button>
+            <div className="space-y-4">
+              <button className="btn btn-success w-full" onClick={handleSave}>
+                Save Changes
+              </button>
+              <button
+                className="btn btn-error w-full"
+                onClick={() => {
+                  setNewUser(user);
+                  setIsEditing(false);
+                }}
+              >
+                Cancel
+              </button>
+            </div>
           )}
         </div>
       </div>

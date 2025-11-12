@@ -104,9 +104,14 @@ const TestimonialMapping = ({
           className="flex flex-col justify-between h-full bg-base-200 p-6 rounded-2xl shadow-lg shadow-primary/30"
         >
           <div>
-            <h3 className="text-2xl sm:text-3xl font-bold flex items-center gap-2 capitalize">
+            <a
+              href={activeTestimonial.linkedIn || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl sm:text-3xl font-bold flex items-center gap-2 capitalize"
+            >
               {activeTestimonial.name}
-            </h3>
+            </a>
 
             <div className="flex items-center space-x-1 my-2">
               {Array.from({ length: activeTestimonial.star }).map(
@@ -122,8 +127,9 @@ const TestimonialMapping = ({
 
             <p className="text-sm sm:text-base text-base-content/80 capitalize">
               {activeTestimonial.designation}
-              {activeTestimonial.currentEmployer &&
-                ` @ ${activeTestimonial.currentEmployer}`}{" "}
+              {activeTestimonial.currentEmployer !== "undefined"
+                ? ` @ ${activeTestimonial.currentEmployer} as ${activeTestimonial.currentPosition}`
+                : ""}{" "}
               |
               <Link
                 className="lowercase hover:underline ml-1"

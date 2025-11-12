@@ -1,6 +1,9 @@
 "use client";
 
+import Loading from "@/components/Loading";
+import { IconBrandGithub, IconMessage, IconThumbUp } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import {
   LineChart,
   Line,
@@ -15,25 +18,59 @@ import {
   Cell,
 } from "recharts";
 
-const data = [
-  { month: "Jan", projects: 2, likes: 24 },
-  { month: "Feb", projects: 3, likes: 45 },
-  { month: "Mar", projects: 5, likes: 70 },
-  { month: "Apr", projects: 4, likes: 60 },
-  { month: "May", projects: 6, likes: 95 },
-  { month: "Jun", projects: 7, likes: 110 },
+interface DashboardData {
+  totalProjects: number;
+  totalLikes: number;
+  totalComments: number;
+  visitors: number;
+  data: Array<{
+    month: string;
+    projects: number;
+    likes: number;
+  }>;
+  techStack: Array<{
+    name: string;
+    value: number;
+  }>;
+}
+const COLORS = [
+  "var(--color-primary)",
+  "var(--color-secondary)",
+  "var(--color-accent)",
+  "var(--color-info)",
+  "var(--color-success)",
+  "var(--color-warning)",
+  "var(--color-error)",
+  "var(--color-neutral)",
+  "var(--color-base-100)",
+  "var(--color-base-200)",
+  "var(--color-base-300)",
 ];
-
-const pieData = [
-  { name: "Next.js", value: 35 },
-  { name: "React", value: 25 },
-  { name: "Python", value: 20 },
-  { name: "PHP", value: 20 },
-];
-
-const COLORS = ["#6366F1", "#14B8A6", "#F43F5E", "#F59E0B"];
 
 export default function DashboardPage() {
+  const [dashboardData, setDashboardData] = useState<DashboardData | null>(
+    null
+  );
+  const [loading, setLoading] = useState<boolean>(true);
+
+  const fetchDashboardData = async () => {
+    try {
+      const response = await fetch("/api/admin");
+      const data = await response.json();
+      setDashboardData(data);
+    } catch (error) {
+      console.error("Error fetching dashboard data:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchDashboardData();
+  }, []);
+
+  if (loading) return <Loading />;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -49,27 +86,49 @@ export default function DashboardPage() {
       {/* Stats Section */}
       <div className="stats shadow w-full mb-10 bg-base-300">
         <div className="stat">
+          <div className="stat-figure text-primary">
+            <IconBrandGithub size={32} />
+          </div>
           <div className="stat-title">Total Projects</div>
-          <div className="stat-value text-primary">42</div>
+          <div className="stat-value text-primary">
+            {dashboardData?.totalProjects || 0}
+          </div>
           <div className="stat-desc">↗︎ 8% from last month</div>
         </div>
 
         <div className="stat">
+          <div className="stat-figure text-secondary">
+            <IconThumbUp size={32} />
+          </div>
           <div className="stat-title">Total Likes</div>
-          <div className="stat-value text-secondary">1.2K</div>
+          <div className="stat-value text-secondary">
+            {dashboardData?.totalLikes || 0}
+          </div>
           <div className="stat-desc">↗︎ 12% growth</div>
         </div>
 
         <div className="stat">
+          <div className="stat-figure text-accent">
+            <IconMessage size={32} />
+          </div>
           <div className="stat-title">Total Comments</div>
-          <div className="stat-value text-accent">320</div>
+          <div className="stat-value text-accent">
+            {dashboardData?.totalComments || 0}
+          </div>
           <div className="stat-desc">↘︎ 2% from last week</div>
         </div>
 
         <div className="stat">
+          <div className="stat-figure text-secondary">
+            <div className="avatar avatar-online">
+              <div className="w-16 rounded-full">
+                <img src="/images/profile.jpg" alt="Saurav image" />
+              </div>
+            </div>
+          </div>
+          <div className="stat-value">{dashboardData?.visitors || 0}</div>
           <div className="stat-title">Visitors</div>
-          <div className="stat-value text-info">8.6K</div>
-          <div className="stat-desc">↗︎ 20% engagement</div>
+          <div className="stat-desc text-info">↗︎ 89% New visitors</div>
         </div>
       </div>
 
@@ -77,16 +136,16 @@ export default function DashboardPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {/* Line Chart */}
         <div className="bg-base-200 p-6 rounded-2xl shadow">
-          <h2 className="text-xl font-semibold mb-4 text-primary">
+          <h2 className="text-xl font-semibold mb-4 text-primary text-center uppercase">
             Monthly Performance
           </h2>
           <ResponsiveContainer width="100%" height={300}>
-            <LineChart data={data}>
+            <LineChart data={dashboardData?.data || []}>
               <XAxis dataKey="month" stroke="currentColor" />
               <YAxis stroke="currentColor" />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: "var(--fallback-b1,oklch(var(--b1)))",
+                  backgroundColor: "var(--color-base-200)",
                   border: "none",
                 }}
               />
@@ -109,16 +168,16 @@ export default function DashboardPage() {
 
         {/* Bar Chart */}
         <div className="bg-base-200 p-6 rounded-2xl shadow">
-          <h2 className="text-xl font-semibold mb-4 text-primary">
+          <h2 className="text-xl font-semibold mb-4 text-primary text-center uppercase">
             Projects vs Likes
           </h2>
           <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={data}>
+            <BarChart data={dashboardData?.data || []}>
               <XAxis dataKey="month" stroke="currentColor" />
               <YAxis stroke="currentColor" />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: "var(--fallback-b1,oklch(var(--b1)))",
+                  backgroundColor: "var(--color-base-200)",
                   border: "none",
                 }}
               />
@@ -130,20 +189,20 @@ export default function DashboardPage() {
 
         {/* Pie Chart */}
         <div className="bg-base-200 p-6 rounded-2xl shadow lg:col-span-2">
-          <h2 className="text-xl font-semibold mb-4 text-primary">
+          <h2 className="text-xl font-semibold mb-4 text-primary text-center uppercase">
             Tech Stack Distribution
           </h2>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie
-                data={pieData}
+                data={dashboardData?.techStack || []}
                 dataKey="value"
                 nameKey="name"
                 outerRadius={120}
                 innerRadius={60}
                 paddingAngle={5}
               >
-                {pieData.map((_, index) => (
+                {dashboardData?.techStack.map((_, index) => (
                   <Cell
                     key={`cell-${index}`}
                     fill={COLORS[index % COLORS.length]}

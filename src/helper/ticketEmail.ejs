@@ -5,143 +5,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🎫 Ticket Received — ScammerPatil</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
-        :root {
-            --color-base-100: oklch(22% .019 237.69);
-            --color-base-200: oklch(20% .019 237.69);
-            --color-base-300: oklch(18% .019 237.69);
-            --color-base-content: oklch(77.383% .043 245.096);
-            --color-primary: oklch(74.703% .158 39.947);
-            --color-primary-content: oklch(14.94% .031 39.947);
-            --color-secondary: oklch(72.537% .177 2.72);
-            --color-secondary-content: oklch(14.507% .035 2.72);
-            --color-accent: oklch(71.294% .166 299.844);
-            --color-accent-content: oklch(14.258% .033 299.844);
-            --color-neutral: oklch(26% .019 237.69);
-            --color-neutral-content: oklch(70% .019 237.69);
-            --radius-box: 1rem;
-            --radius-field: .5rem;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--color-base-100);
-            color: var(--color-base-content);
-            margin: 0;
-            padding: 0;
-        }
-
-        .email-wrapper {
-            max-width: 650px;
-            margin: 40px auto;
-            background: var(--color-base-200);
-            border-radius: var(--radius-box);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-            overflow: hidden;
-            border: 1px solid var(--color-base-300);
-        }
-
-        .header {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-            padding: 30px 20px;
-            text-align: center;
-            color: var(--color-primary-content);
-        }
-
-        .header img {
-            width: 80px;
-            margin-bottom: 10px;
-        }
-
-        .header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .content {
-            padding: 25px 30px;
-            line-height: 1.8;
-            color: var(--color-base-content);
-        }
-
-        .content h2 {
-            color: var(--color-primary);
-            font-size: 22px;
-            margin-top: 0;
-        }
-
-        .message-box {
-            background-color: var(--color-base-300);
-            border-left: 5px solid var(--color-primary);
-            padding: 15px 20px;
-            border-radius: var(--radius-field);
-            margin: 20px 0;
-            color: var(--color-neutral-content);
-            font-size: 15px;
-        }
-
-        a {
-            color: var(--color-accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            text-align: center;
-            background-color: var(--color-base-300);
-            padding: 20px;
-            font-size: 13px;
-            color: var(--color-neutral-content);
-        }
-
-        .emoji {
-            font-size: 20px;
-        }
-    </style>
 </head>
 
-<body>
-    <div class="email-wrapper">
-        <div class="header">
-            <img src="https://iili.io/Kp0BvdF.png" alt="Logo" />
-            <h1>🎟️ Ticket Received!</h1>
+<body style="font-family: 'Inter', sans-serif; margin: 0; padding: 0;">
+    <div
+        style="max-width: 650px; margin: 40px auto; background: #141516; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.35); overflow: hidden; border: 1px solid #101112;">
+
+        <!-- Header -->
+        <div
+            style="background: linear-gradient(135deg, #f4b400, #ea4335); padding: 30px 20px; text-align: center; color: #2d2d2d;">
+            <img src="https://iili.io/Kp0BvdF.png" alt="Logo" style="width: 80px; margin-bottom: 10px;" />
+            <h1 style="font-size: 28px; margin-bottom: 10px;">🎟️ Ticket Received!</h1>
             <p>Hey <strong>
                     <%= name %>
                 </strong> 👋</p>
         </div>
 
-        <div class="content">
-            <h2>We’ve Got Your Back 🚀</h2>
-            <p>
-                Thanks for reaching out to <strong>ScammerPatil</strong> — your go-to dev magician 🧙‍♂️✨
-            </p>
+        <!-- Content -->
+        <div style="padding: 25px 30px; line-height: 1.8; color: #c8c8c8;">
+            <h2 style="color: #f4b400; font-size: 22px; margin-top: 0;">We’ve Got Your Back 🚀</h2>
+
+            <p>Thanks for reaching out to <strong>ScammerPatil</strong> — your go-to dev magician 🧙‍♂️✨</p>
 
             <p>Here’s what you sent:</p>
-            <div class="message-box">
+
+            <div
+                style="background-color: #101112; border-left: 5px solid #f4b400; padding: 15px 20px; border-radius: 8px; margin: 20px 0; color: #d0d0d0; font-size: 15px;">
                 <p><strong>📝 Message:</strong>
                     <%= ticket.message %>
                 </p>
             </div>
 
-            <p>
-                Don’t worry — your ticket is safely in my to-do vault 🔒 and I’ll get back to you faster than a React
-                hot reload ⚡.
-            </p>
+            <p>Don’t worry — your ticket is safely in my to-do vault 🔒 and I’ll get back to you faster than a React hot
+                reload ⚡.</p>
+
+            <p>While you wait, grab a ☕ and check out what I’ve been brewing 👇</p>
 
             <p>
-                While you wait, grab a ☕ and check out what I’ve been brewing 👇
-            </p>
-
-            <p>
-                🌐 <a href="https://scammerpatil.vercel.app/" target="_blank">Portfolio</a><br />
-                💼 <a href="https://linkedin.com/in/sauravdeepakpatil" target="_blank">LinkedIn</a><br />
-                🧠 <a href="https://github.com/ScammerPatil" target="_blank">GitHub</a>
+                🌐 <a href="https://scammerpatil.vercel.app/" target="_blank"
+                    style="color: #bb86fc; text-decoration: none; font-weight: 600;">Portfolio</a><br />
+                💼 <a href="https://linkedin.com/in/scammerpatil" target="_blank"
+                    style="color: #bb86fc; text-decoration: none; font-weight: 600;">LinkedIn</a><br />
+                🧠 <a href="https://github.com/ScammerPatil" target="_blank"
+                    style="color: #bb86fc; text-decoration: none; font-weight: 600;">GitHub</a>
             </p>
 
             <p>
@@ -151,14 +57,19 @@
             </p>
         </div>
 
-        <div class="footer">
+        <!-- Footer -->
+        <div style="text-align: center; background-color: #101112; padding: 20px; font-size: 13px; color: #d0d0d0;">
             <p>Made with 💜 & creativity by ScammerPatil.</p>
             <p>
-                🌐 <a href="https://scammerpatil.vercel.app/" target="_blank">Portfolio</a> •
-                💼 <a href="https://linkedin.com/in/sauravdeepakpatil" target="_blank">LinkedIn</a> •
-                🧠 <a href="https://github.com/ScammerPatil" target="_blank">GitHub</a>
+                🌐 <a href="https://scammerpatil.vercel.app/" target="_blank"
+                    style="color: #bb86fc; text-decoration: none; font-weight: 600;">Portfolio</a> •
+                💼 <a href="https://linkedin.com/in/scammerpatil" target="_blank"
+                    style="color: #bb86fc; text-decoration: none; font-weight: 600;">LinkedIn</a> •
+                🧠 <a href="https://github.com/ScammerPatil" target="_blank"
+                    style="color: #bb86fc; text-decoration: none; font-weight: 600;">GitHub</a>
             </p>
         </div>
+
     </div>
 </body>
 

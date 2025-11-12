@@ -125,15 +125,15 @@ const ManageLanguagesPage = () => {
         subTitle="Manage programming languages and skills."
       />
       <div className="px-6 mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 lg:gap-6 mb-8">
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-base">
+            <legend className="fieldset-legend">
               Select a Language Title <span className="text-error">*</span>
             </legend>
             <select
               value={currentTitle}
               onChange={(e) => setCurrentTitle(e.target.value)}
-              className="select select-bordered w-full mb-4"
+              className="select select-primary w-full mb-4"
             >
               <option value="">Select a Language Title</option>
               {[
@@ -154,7 +154,7 @@ const ManageLanguagesPage = () => {
           </fieldset>
 
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-base">
+            <legend className="fieldset-legend">
               Skill Name <span className="text-error">*</span>
             </legend>
             <input
@@ -164,12 +164,12 @@ const ManageLanguagesPage = () => {
               onChange={(e) =>
                 setNewSkill((prev) => ({ ...prev, name: e.target.value }))
               }
-              className="input input-bordered w-full"
+              className="input input-primary w-full"
             />
           </fieldset>
 
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-base">
+            <legend className="fieldset-legend">
               Icon URL <span className="text-error">*</span>
             </legend>
             <input
@@ -179,13 +179,13 @@ const ManageLanguagesPage = () => {
               onChange={(e) =>
                 setNewSkill((prev) => ({ ...prev, iconUrl: e.target.value }))
               }
-              className="input input-bordered w-full"
+              className="input input-primary w-full"
             />
           </fieldset>
 
           <div className="flex flex-row gap-4 w-full">
             <button
-              className="btn btn-primary mx-auto w-full lg:mt-10"
+              className="btn btn-primary mx-auto w-full lg:mt-8.5"
               onClick={handleAddSkill}
             >
               {isEditing ? "Update Skill" : "Add Skill"}
@@ -208,18 +208,17 @@ const ManageLanguagesPage = () => {
           {languages.map((lang) => (
             <div
               key={lang.title}
-              className="bg-base-300 shadow-xl rounded-2xl text-base-content"
+              className="bg-base-300 shadow-xl rounded-2xl text-base-content overflow-x-auto"
             >
-              <div className="px-6 py-4 w-full">
+              <div className="px-6 py-4 w-full overflow-x-auto ">
                 <h2 className="text-center py-2 uppercase font-bold">
                   {lang.title}
                 </h2>
-                <table className="table table-zebra overflow-x-auto bg-base-100">
+                <table className="table table-zebra bg-base-100">
                   <thead>
                     <tr>
                       <th>#</th>
                       <th>Skills</th>
-                      <th>Icon URL</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
@@ -228,34 +227,27 @@ const ManageLanguagesPage = () => {
                       <tr key={skill.name}>
                         <td>{index + 1}</td>
                         <td>{skill.name}</td>
-                        <td>
-                          <a
-                            href={skill.iconUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            View Icon
-                          </a>
-                        </td>
                         <td className="space-x-2">
-                          <button
-                            className="btn btn-sm btn-info"
-                            onClick={() => {
-                              window.scrollTo({ top: 0, behavior: "smooth" });
-                              handleEditSkill(lang.title, skill);
-                            }}
-                          >
-                            Edit
-                            <IconEdit />
-                          </button>
-                          <button
-                            className="btn btn-sm btn-error"
-                            onClick={() =>
-                              handleDeleteSkill(lang.title, skill.name)
-                            }
-                          >
-                            Delete <IconTrash />
-                          </button>
+                          <div className="flex flex-row gap-2">
+                            <button
+                              className="btn btn-sm btn-info"
+                              onClick={() => {
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                                handleEditSkill(lang.title, skill);
+                              }}
+                            >
+                              Edit
+                              <IconEdit />
+                            </button>
+                            <button
+                              className="btn btn-sm btn-error"
+                              onClick={() =>
+                                handleDeleteSkill(lang.title, skill.name)
+                              }
+                            >
+                              Delete <IconTrash />
+                            </button>
+                          </div>
                         </td>
                       </tr>
                     ))}

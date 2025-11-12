@@ -119,7 +119,7 @@ const Contact = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
-                className="rounded-md bg-primary px-8 py-3 text-primary-content font-semibold shadow-md transition-colors duration-300"
+                className="btn btn-lg btn-primary font-semibold shadow-md transition-colors duration-300 btn-outline"
                 type="submit"
               >
                 Submit Ticket
