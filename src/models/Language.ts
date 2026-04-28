@@ -13,12 +13,14 @@ const LanguageModel = new Schema({
       "Tool Trove 🧰",
       "AI/ML Arsenal 🤖",
       "Framework Forcefield 🚀",
-      "App Crafting 🚀",
+      "App Crafting 📱",
+      "Cloud Command ☁️",
+      "System Structure 🏗️",
+      "Vector Vaults 🎯",
     ],
   },
   description: {
     type: String,
-    required: true,
   },
   skills: [
     {

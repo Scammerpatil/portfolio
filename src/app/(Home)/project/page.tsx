@@ -352,6 +352,9 @@ export default function ProjectInfoPage() {
                           <img
                             alt={`${c.user} avatar`}
                             src="/user-avatar.png"
+                              width="40"
+                              height="40"
+                              className="w-full h-full object-cover"
                           />
                         </div>
                       </div>

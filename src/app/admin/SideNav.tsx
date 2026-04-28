@@ -74,9 +74,10 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
                   <Image
                     src="/images/profile.jpg"
                     alt="Avatar"
-                    className="rounded-full"
                     width={40}
                     height={40}
+                    loading="eager"
+                    className="rounded-full w-auto h-auto"
                     tabIndex={0}
                     role="button"
                   />
@@ -123,9 +124,10 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
                   <Image
                     src="/images/profile.jpg"
                     alt="Avatar"
-                    className="rounded-full"
                     width={40}
                     height={40}
+                    loading="eager"
+                    className="rounded-full w-auto h-auto"
                     tabIndex={0}
                     role="button"
                   />

@@ -39,7 +39,7 @@ const SkillBadgeItem = ({ skill }: { skill: Skill }) => {
       className="bg-base-content/70 flex gap-2 border border-base-100 shadow-md shadow-primary rounded-2xl items-center py-2 px-3 mb-2 hover:scale-105 transition-transform duration-200"
     >
       <Image
-        className="w-7 sm:w-8 md:w-9 lg:w-10 object-contain"
+        className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 object-contain"
         src={src}
         width={48}
         height={48}

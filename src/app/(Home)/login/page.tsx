@@ -37,7 +37,11 @@ const Login = () => {
       <div className="flex justify-center items-center w-full bg-base-200 px-5 py-5 h-screen">
         <div className="xl:max-w-7xl bg-base-100 drop-shadow-xl border border-base-content/20 w-full rounded-md flex justify-between items-stretch px-5 xl:px-5 py-10">
           <div className="sm:w-[60%] lg:w-[50%] bg-cover bg-center items-center justify-center hidden md:flex ">
-            <img src="./images/login.png" alt="login" className="h-[500px]" />
+            <img
+              src="./images/login.png"
+              alt="login"
+              className="h-[500px] w-auto"
+            />
           </div>
           <div className="mx-auto w-full lg:w-1/2 min-h-full flex flex-col items-center justify-center">
             <h1 className="text-center text-2xl sm:text-3xl font-semibold text-primary">

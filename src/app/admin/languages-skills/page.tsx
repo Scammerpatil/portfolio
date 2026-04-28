@@ -124,7 +124,7 @@ const ManageLanguagesPage = () => {
         title="Languages & Skills Management"
         subTitle="Manage programming languages and skills."
       />
-      <div className="px-6 mx-auto">
+      <div className="px-6 mx-auto" id="edit-skill-form">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-3 lg:gap-6 mb-8">
           <fieldset className="fieldset">
             <legend className="fieldset-legend">
@@ -144,7 +144,10 @@ const ManageLanguagesPage = () => {
                 "Tool Trove 🧰",
                 "AI/ML Arsenal 🤖",
                 "Framework Forcefield 🚀",
-                "App Crafting 🚀",
+                "App Crafting 📱",
+                "Cloud Command ☁️",
+                "System Structure 🏗️",
+                "Vector Vaults 🎯"
               ].map((title) => (
                 <option key={title} value={title}>
                   {title}
@@ -183,16 +186,14 @@ const ManageLanguagesPage = () => {
             />
           </fieldset>
 
-          <div className="flex flex-row gap-4 w-full">
-            <button
-              className="btn btn-primary mx-auto w-full lg:mt-8.5"
-              onClick={handleAddSkill}
-            >
+          <div className="flex gap-4 w-full lg:mt-8.25">
+            <button className="btn btn-primary flex-1" onClick={handleAddSkill}>
               {isEditing ? "Update Skill" : "Add Skill"}
             </button>
+
             {isEditing && (
               <button
-                className="btn btn-error mx-auto w-full"
+                className="btn btn-error flex-1"
                 onClick={() => {
                   setIsEditing(false);
                   setNewSkill({ name: "", iconUrl: "" });
@@ -219,6 +220,7 @@ const ManageLanguagesPage = () => {
                     <tr>
                       <th>#</th>
                       <th>Skills</th>
+                      <th>URL</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
@@ -227,12 +229,15 @@ const ManageLanguagesPage = () => {
                       <tr key={skill.name}>
                         <td>{index + 1}</td>
                         <td>{skill.name}</td>
+                        <td><a href={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${skill.iconUrl}`} className="link">
+                        {skill.iconUrl}
+                        </a></td>
                         <td className="space-x-2">
                           <div className="flex flex-row gap-2">
                             <button
                               className="btn btn-sm btn-info"
                               onClick={() => {
-                                window.scrollTo({ top: 0, behavior: "smooth" });
+                                document.getElementById("edit-skill-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
                                 handleEditSkill(lang.title, skill);
                               }}
                             >

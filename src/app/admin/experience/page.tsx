@@ -12,7 +12,7 @@ export default function ExperiencePage() {
 
   const fetchExperiences = async () => {
     try {
-      const response = await axios.get("/api/experience/");
+      const response = await axios.get("/api/experience");
       setExperiences(response.data);
     } catch (error) {
       console.error("Failed to fetch experience:", error);
@@ -29,7 +29,6 @@ export default function ExperiencePage() {
         !newExperience.company ||
         !newExperience.startDate ||
         !newExperience.desc ||
-        !file ||
         !newExperience.skills
       ) {
         toast.error("Please fill all the required fields");
@@ -48,7 +47,9 @@ export default function ExperiencePage() {
       }
       formData.append("desc", newExperience.desc);
       formData.append("skills", newExperience.skills.join(","));
-      formData.append("image", file);
+      if (file){
+        formData.append("image", file);
+      }
       const res = axios.post("/api/experience/add-experience", formData);
       toast.promise(res, {
         loading: "Adding experience...",
@@ -99,7 +100,7 @@ export default function ExperiencePage() {
             name="role"
             placeholder="e.g., Frontend Developer"
             className="input input-primary w-full"
-            value={newExperience.role}
+            value={newExperience.role ?? ""}
             onChange={(e) =>
               setNewExperience({ ...newExperience, role: e.target.value })
             }
@@ -114,7 +115,7 @@ export default function ExperiencePage() {
             name="company"
             placeholder="Infosys"
             className="input input-primary w-full"
-            value={newExperience.company}
+            value={newExperience.company ?? ""}
             onChange={(e) =>
               setNewExperience({ ...newExperience, company: e.target.value })
             }
@@ -129,7 +130,7 @@ export default function ExperiencePage() {
             name="companyURL"
             placeholder="https://www.infosys.com"
             className="input input-primary w-full"
-            value={newExperience.companyURL}
+            value={newExperience.companyURL ?? ""}
             onChange={(e) =>
               setNewExperience({ ...newExperience, companyURL: e.target.value })
             }
@@ -144,9 +145,11 @@ export default function ExperiencePage() {
             name="startDate"
             placeholder="e.g., 2022-01-01"
             className="input input-primary w-full"
-            value={new Date(newExperience.startDate || new Date())
-              .toISOString()
-              .slice(0, 10)}
+            value={
+              newExperience.startDate
+                ? new Date(newExperience.startDate).toISOString().slice(0, 10)
+                : ""
+            }
             onChange={(e) =>
               setNewExperience({
                 ...newExperience,
@@ -161,9 +164,11 @@ export default function ExperiencePage() {
             type="date"
             name="endDate"
             className="input input-primary w-full"
-            value={new Date(newExperience.endDate || new Date())
-              .toISOString()
-              .slice(0, 10)}
+            value={
+              newExperience.endDate
+                ? new Date(newExperience.endDate).toISOString().slice(0, 10)
+                : ""
+            }
             onChange={(e) =>
               setNewExperience({
                 ...newExperience,
@@ -192,7 +197,7 @@ export default function ExperiencePage() {
             name="desc"
             placeholder="Describe your role and responsibilities..."
             className="textarea textarea-primary w-full"
-            value={newExperience.desc}
+            value={newExperience.desc ?? ""}
             onChange={(e) =>
               setNewExperience({ ...newExperience, desc: e.target.value })
             }
@@ -207,7 +212,7 @@ export default function ExperiencePage() {
             placeholder="C, C++, Java, Python ...."
             name="skills"
             className="input input-primary w-full"
-            value={newExperience?.skills?.join(", ")}
+            value={newExperience?.skills?.join(", ") ?? ""}
             onChange={(e) =>
               setNewExperience({
                 ...newExperience,
@@ -235,36 +240,37 @@ export default function ExperiencePage() {
                   exp.image.data
                 ).toString("base64")}`}
                 alt={exp.company}
+                width="112"
+                height="112"
                 className="rounded-xl w-28 h-28 object-cover"
               />
             </figure>
             <div className="card-body">
-              <div className="card-title justify-between w-full">
-                <div className="space-y-1">
-                  <h2 className="card-title">{exp.role}</h2>
-                  <a
-                    href={exp.companyURL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary font-semibold hover:underline"
-                  >
-                    {exp.company}
-                  </a>
+              <div className="w-full">
+                <div className="flex justify-between items-center">
+                  <h2 className="card-title leading-tight">{exp.role}</h2>
+                  <span className="text-sm">
+                    {new Date(exp.startDate).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "short",
+                    })}{" "}
+                    -{" "}
+                    {exp.endDate
+                      ? new Date(exp.endDate).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "short",
+                        })
+                      : "Present"}
+                  </span>
                 </div>
-
-                <p className="text-sm text-base-content/60">
-                  {new Date(exp.startDate).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "short",
-                  })}{" "}
-                  -{" "}
-                  {exp.endDate
-                    ? new Date(exp.endDate).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "short",
-                      })
-                    : "Present"}
-                </p>
+                <a
+                  href={exp.companyURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary font-semibold hover:underline"
+                >
+                  {exp.company}
+                </a>
               </div>
 
               <p className="text-base-content/90 text-sm mt-2">{exp.desc}</p>

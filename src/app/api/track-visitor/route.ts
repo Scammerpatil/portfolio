@@ -26,7 +26,7 @@ export async function GET(req: NextRequest) {
     const visitor = await Visitor.findOneAndUpdate(
       {},
       { $inc: { visitorCount: 1 } },
-      { new: true, upsert: true }
+      { returnDocument: "after", upsert: true }
     );
 
     const count = visitor.visitorCount;

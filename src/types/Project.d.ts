@@ -34,6 +34,7 @@ export interface ProjectData {
     date: Date;
   }[];
   likes?: number;
+  approved: boolean;
   createdAt?: Date;
   updatedAt?: Date;
   date?: Date;

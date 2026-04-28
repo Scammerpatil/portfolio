@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
     const updatedProject = await Project.findOneAndUpdate(
       { slug },
       { $inc: { likes: 1 } },
-      { new: true, projection: { likes: 1 } }
+      { returnDocument: "after", projection: { likes: 1 } }
     );
 
     if (!updatedProject) {

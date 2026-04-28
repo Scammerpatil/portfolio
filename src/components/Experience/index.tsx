@@ -25,7 +25,7 @@ const TimelineItem = ({ item }: { item: Experience }) => {
       <div className="border shadow-primary shadow-md hover:-translate-y-2 transition transform duration-300 ease-in-out flex flex-col gap-2 border-primary p-2 rounded-2xl md:p-4 bg-base-200 timeline-end mb-10 md:text-end">
         <div className="flex gap-2 items-center">
           <Image
-            className="w-16 max-md:w-14 rounded-full"
+            className="w-16 h-16 max-md:w-14 max-md:h-14 rounded-full"
             src={`data:${item.image.contentType};base64,${Buffer.from(
               item.image.data
             ).toString("base64")}`}

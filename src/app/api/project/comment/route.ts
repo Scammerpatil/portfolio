@@ -84,7 +84,7 @@ export async function POST(req: NextRequest) {
     const updatedProject = await Project.findOneAndUpdate(
       { slug },
       { $push: { comments: newComment } },
-      { new: true, projection: { comments: 1 } }
+      { returnDocument: "after", projection: { comments: 1 } }
     );
 
     if (!updatedProject) {

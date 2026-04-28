@@ -43,7 +43,7 @@ const Projects = ({ projects }: { projects: ProjectData[] }) => {
 
       {/* Projects Grid */}
       <div className="mt-10">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="sync">
           <motion.div
             key={activeStack}
             initial={{ opacity: 0, y: 30 }}

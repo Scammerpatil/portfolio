@@ -8,17 +8,22 @@ dbConfig();
 let cachedRequests: any = null;
 let lastFetched = 0;
 const TTL = 10 * 60 * 1000; // 10 minutes cache
+const isDev = process.env.NODE_ENV === "development";
+
+const cacheHeaders = isDev
+  ? { "Cache-Control": "no-store" }
+  : { "Cache-Control": "public, s-maxage=600, stale-while-revalidate=120" };
 
 export async function GET() {
   try {
     const now = Date.now();
 
     // ✅ Serve cached data if still fresh
-    if (cachedRequests && now - lastFetched < TTL) {
+    if (!isDev && cachedRequests && now - lastFetched < TTL) {
       return NextResponse.json(cachedRequests, {
         status: 200,
         headers: {
-          "Cache-Control": "public, s-maxage=600, stale-while-revalidate=120",
+          ...cacheHeaders,
         },
       });
     }
@@ -27,13 +32,15 @@ export async function GET() {
     const requests = await ServiceRequest.find().sort({ createdAt: -1 });
 
     // ✅ Update cache
-    cachedRequests = requests;
-    lastFetched = now;
+    if (!isDev) {
+      cachedRequests = requests;
+      lastFetched = now;
+    }
 
     return NextResponse.json(requests, {
       status: 200,
       headers: {
-        "Cache-Control": "public, s-maxage=600, stale-while-revalidate=120",
+        ...cacheHeaders,
       },
     });
   } catch (error) {

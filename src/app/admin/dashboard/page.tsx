@@ -122,7 +122,13 @@ export default function DashboardPage() {
           <div className="stat-figure text-secondary">
             <div className="avatar avatar-online">
               <div className="w-16 rounded-full">
-                <img src="/images/profile.jpg" alt="Saurav image" />
+                <img
+                  src="/images/profile.jpg"
+                  alt="Saurav image"
+                  width="64"
+                  height="64"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
       const updatedProject = await Project.findOneAndUpdate(
         { slug },
         { $set: newProject },
-        { new: true }
+        { returnDocument: "after" }
       );
       return NextResponse.json(
         { message: "Project updated successfully", project: updatedProject },

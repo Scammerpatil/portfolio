@@ -124,15 +124,17 @@ export default function TestimonialsPage() {
               className="card shadow-lg compact bg-base-300"
             >
               {review.image && review.image.data && (
-                <Image
-                  src={`data:${review.image.contentType};base64,${Buffer.from(
-                    review.image.data
-                  ).toString("base64")}`}
-                  alt={review.name}
-                  height={192}
-                  width={384}
-                  className="w-full h-48 object-contain"
-                />
+                <div className="relative w-full h-48">
+                  <Image
+                    src={`data:${review.image.contentType};base64,${Buffer.from(
+                      review.image.data
+                    ).toString("base64")}`}
+                    alt={review.name}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-contain"
+                  />
+                </div>
               )}
 
               <div className="card-body">

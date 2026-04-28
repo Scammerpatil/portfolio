@@ -96,6 +96,8 @@ const About = ({
             alt="profile"
             width={325}
             height={325}
+            loading="eager"
+            priority
             className="rounded-full w-full h-full object-cover"
           />
         </NeonGradientCard>

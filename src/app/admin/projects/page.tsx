@@ -130,6 +130,23 @@ const ManageProjectsPage = () => {
     }
   };
 
+  const handleToggleApproval = async (projectId: string, newStatus: boolean) => {
+  try {
+    const response = axios.patch(`/api/project/updateStatus`, {
+      projectId,
+      approved: newStatus,
+    });
+
+    toast.promise(response, {
+      loading: newStatus ? "Approving Project..." : "Disabling Project...",
+      success: `Project ${newStatus ? "approved" : "disabled"} successfully!`,
+      error: `Failed to ${newStatus ? "approve" : "disable"} project.`,
+    });
+  } catch (error) {
+    console.error("Failed to update status", error);
+  }
+};
+
   if (!user) return <Loading />;
 
   return (
@@ -522,19 +539,14 @@ const ManageProjectsPage = () => {
           </button>
         </div>
 
-        {/* Displaying Projects */}
-        <div className="mt-8">
-          <hr className="bg-primary" />
-          <h2 className="text-xl text-center font-semibold my-4">
-            Projects Showcase
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3">
-            {user.projects.map((project) => (
-              <div
-                key={project._id}
-                className="card shadow-lg compact bg-base-300"
-              >
-                {project.bannerImage && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10 gap-6">
+          {user.projects.map((project) => (
+            <div
+              key={project._id}
+              className="card shadow-xl bg-base-300 overflow-hidden border border-base-100"
+            >
+              {project.bannerImage && (
+                <figure className="relative h-48 w-full">
                   <Image
                     src={`data:${
                       project.bannerImage.contentType
@@ -542,42 +554,67 @@ const ManageProjectsPage = () => {
                       "base64"
                     )}`}
                     alt={project.title}
-                    height={192}
-                    width={384}
-                    className="w-full h-48 object-cover"
+                    fill
+                    className="object-cover"
                   />
-                )}
-                <div className="card-body">
-                  <h3 className="card-title">
-                    {project.name} | {project.title}
+                </figure>
+              )}
+
+              <div className="card-body p-5">
+                <div className="flex justify-between items-start">
+                  <h3 className="card-title text-lg">
+                    {project.name}{" "}
+                    <span className="text-opacity-50 text-sm">
+                      | {project.title}
+                    </span>
                   </h3>
-                  <p>{project.desc}</p>
-                  <p className="text-sm text-base-content mt-2">
-                    Technologies:{" "}
-                    {Object.entries(project.technologies)
-                      .flatMap(([stack, techList]) =>
-                        techList?.technologies?.map((tech) => tech)
-                      )
-                      .join(", ")}
-                  </p>
-                  <div className="card-actions justify-end">
-                    <button
-                      className="btn btn-warning"
-                      onClick={() => handleEditProject(project)}
-                    >
-                      Edit <IconEdit />
-                    </button>
-                    <button
-                      className="btn btn-error"
-                      onClick={() => handleDeleteProject(project._id!)}
-                    >
-                      Delete <IconTrash />
-                    </button>
+                  <div
+                    className={`badge ${
+                      project.approved ? "badge-success" : "badge-ghost"
+                    } badge-sm`}
+                  >
+                    {project.approved ? "Live" : "Pending"}
                   </div>
                 </div>
+
+                <p className="text-sm line-clamp-2">{project.desc}</p>
+
+                <div className="text-xs text-base-content/70 mt-2">
+                  <span className="font-bold">Stack:</span>{" "}
+                  {project.technologies
+                    .flatMap((techObj) => techObj.technologies)
+                    .join(", ")}
+                </div>
+
+                <div className="card-actions justify-end mt-4 pt-4 border-t border-base-100">
+                  <button
+                    className={`btn btn-sm ${
+                      project.approved ? "btn-outline btn-info" : "btn-success"
+                    }`}
+                    onClick={() =>
+                      handleToggleApproval(project._id!, !project.approved)
+                    }
+                  >
+                    {project.approved ? "Disable" : "Approve"}
+                  </button>
+
+                  <button
+                    className="btn btn-sm btn-warning"
+                    onClick={() => handleEditProject(project)}
+                  >
+                    <IconEdit size={16} />
+                  </button>
+
+                  <button
+                    className="btn btn-sm btn-error"
+                    onClick={() => handleDeleteProject(project._id!)}
+                  >
+                    <IconTrash size={16} />
+                  </button>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </>

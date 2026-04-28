@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const isAuthenticated = req.cookies.get("isAuthenticated")?.value || "false";
   if (isAuthenticated === "true") {
     return NextResponse.next();
@@ -11,5 +11,5 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: "/user/:path*",
+  matcher: "/admin/:path*",
 };

@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
     const { formData } = await req.json();
     if (
       formData.email === "sauravpatil453@gmail.com" &&
-      formData.password === "Saudip@123"
+      formData.password === "Sausak@123"
     ) {
       // Set Cookies
       const response = NextResponse.json({ message: "Login successful" });

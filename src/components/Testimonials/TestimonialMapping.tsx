@@ -60,7 +60,7 @@ const TestimonialMapping = ({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Image side */}
         <div className="relative h-72 sm:h-80 md:h-96 w-full">
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="sync">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial._id}

@@ -129,6 +129,11 @@ const ProjectModel = new Schema(
       },
     ],
 
+    approved:{
+      type: Boolean,
+      default: false,
+    },
+
     likes: {
       type: Number,
       default: 0,

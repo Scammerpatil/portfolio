@@ -1,0 +1,1602 @@
+[
+  {
+    "name": "DevFolio Pro",
+    "title": "Developer Portfolio Portal",
+    "slug": "portfolio",
+    "desc": "A modern, highly responsive personal portfolio website designed to seamlessly showcase projects, skills, and professional experience. Features smooth animations, dynamic dark/light theme support, and a robust backend integration for managing testimonials and contact form submissions.",
+    "industry": "Productivity",
+    "challenge": "Creating a highly performant, accessible, and visually engaging portfolio capable of dynamic content updates.",
+    "solution": "Leveraged Next.js for server-side rendering and Tailwind CSS for rapid, responsive styling, ensuring sub-second load times.",
+    "liveLink": "https://scammerpatil.vercel.app/",
+    "github": "https://github.com/Scammerpatil/portfolio",
+    "stack": "Next Level 🆙",
+    "features": ["Responsive Design", "API Integration", "Dark/Light Mode", "Dynamic Contact Form"],
+    "envVariables": ["PORT", "DATABASE_URL", "NEXT_PUBLIC_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "Tailwind CSS"]
+      }
+    ]
+  },
+  {
+    "name": "AegisHealth Hub",
+    "title": "AegisHealth Medical Management System",
+    "slug": "aegishealth",
+    "desc": "An advanced healthcare management system designed to streamline patient records, appointment scheduling, and clinic workflows. Focuses on data security and an intuitive user experience for both medical staff and patients.",
+    "industry": "Healthcare",
+    "challenge": "Managing sensitive patient data securely while providing real-time appointment syncing.",
+    "solution": "Implemented a secure API-driven architecture with encrypted database storage and real-time state management.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/AegisHealth",
+    "stack": "MERN Magic ✨",
+    "features": ["Patient Dashboard", "Appointment Scheduling", "Secure Data Encryption"],
+    "envVariables": ["PORT", "DATABASE_URL", "JWT_SECRET"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["JavaScript", "React", "Node.js", "MongoDB"]
+      }
+    ]
+  },
+  {
+    "name": "RakshaVision AI",
+    "title": "Raksha Vision: Intelligent Surveillance",
+    "slug": "raksha-vision",
+    "desc": "An intelligent surveillance and security monitoring system utilizing advanced algorithms to detect anomalies and ensure environmental safety. Built to provide real-time alerts and comprehensive visual analytics.",
+    "industry": "Real Estate",
+    "challenge": "Processing high-resolution video streams for anomaly detection without high latency.",
+    "solution": "Utilized optimized TypeScript pipelines and modern streaming protocols to ensure rapid frame processing.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/raksha-vision",
+    "stack": "Next Level 🆙",
+    "features": ["Real-time Monitoring", "Threat Detection", "Automated Alerts"],
+    "envVariables": ["PORT", "DATABASE_URL", "CAMERA_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "WebRTC", "TensorFlow.js"]
+      }
+    ]
+  },
+  {
+    "name": "HireHub Connect",
+    "title": "Hire Hub Recruitment Platform",
+    "slug": "hire-hub",
+    "desc": "A comprehensive recruitment and talent acquisition platform designed to bridge the gap between top-tier candidates and leading employers through an intuitive matching algorithm.",
+    "industry": "Productivity",
+    "challenge": "Filtering through massive volumes of candidate profiles to find relevant matches efficiently.",
+    "solution": "Developed a robust search and filtering algorithm integrated with an optimized database schema.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/hire-hub",
+    "stack": "MERN Magic ✨",
+    "features": ["Candidate Filtering", "Employer Dashboard", "Resume Parsing"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["JavaScript", "Express", "React"]
+      }
+    ]
+  },
+  {
+    "name": "HireHub Core API",
+    "title": "Hire Hub Backend Engine",
+    "slug": "hire-hub-backend",
+    "desc": "The robust, highly scalable backend engine powering the Hire Hub ecosystem. Engineered to handle secure authentication, complex database queries, and real-time notifications for the recruitment process.",
+    "industry": "Productivity",
+    "challenge": "Building a resilient and scalable backend capable of handling high concurrent user traffic during job fairs.",
+    "solution": "Implemented a scalable microservices-inspired architecture using Java and Spring Boot.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/hire-hub-backend",
+    "stack": "Java Jolt ⚡",
+    "features": ["RESTful APIs", "JWT Authentication", "Scalable Architecture"],
+    "envVariables": ["PORT", "DATABASE_URL", "SPRING_PROFILES_ACTIVE"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["Java", "Spring Boot", "PostgreSQL"]
+      }
+    ]
+  },
+  {
+    "name": "VaultPay Gateway API",
+    "title": "Vault Pay Secure Backend",
+    "slug": "vault-pay-backend",
+    "desc": "A highly secure, enterprise-grade payment processing backend. Vault Pay ensures rapid, encrypted transactions and seamless integration with third-party banking APIs for reliable financial operations.",
+    "industry": "Finance",
+    "challenge": "Ensuring zero data loss and PCI-DSS compliance for sensitive payment data.",
+    "solution": "Built a robust C# .NET core backend with strong data encryption and transactional database mechanisms.",
+    "liveLink": "https://vault-pay-l668.vercel.app",
+    "github": "https://github.com/Scammerpatil/vault-pay-backend",
+    "stack": "Next Level 🆙",
+    "features": ["Transaction Processing", "Secure Webhooks", "Role-Based Access"],
+    "envVariables": ["PORT", "DATABASE_URL", "STRIPE_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["C#", ".NET Core", "SQL Server"]
+      }
+    ]
+  },
+  {
+    "name": "VaultPay UI",
+    "title": "Vault Pay Fintech Dashboard",
+    "slug": "vault-pay",
+    "desc": "The frontend client for Vault Pay, offering users a sleek, intuitive dashboard to track transactions, manage wallets, and view financial analytics in real-time.",
+    "industry": "Finance",
+    "challenge": "Displaying complex financial data sets in an easy-to-understand, responsive format.",
+    "solution": "Utilized advanced charting libraries and TypeScript to create a type-safe, fluid user interface.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/vault-pay",
+    "stack": "Next Level 🆙",
+    "features": ["Financial Analytics", "Real-time Balance Updates", "Responsive Charts"],
+    "envVariables": ["PORT", "DATABASE_URL", "NEXT_PUBLIC_API_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "Chart.js"]
+      }
+    ]
+  },
+  {
+    "name": "CareQueue Sync",
+    "title": "Hospital Queue Management System",
+    "slug": "hospital-queue-system",
+    "desc": "An intelligent queue management solution engineered for modern hospitals. It reduces patient wait times and optimizes resource allocation across various hospital departments.",
+    "industry": "Healthcare",
+    "challenge": "Handling dynamic, unpredictable patient influx and priority routing for emergencies.",
+    "solution": "Implemented a real-time queuing algorithm with WebSocket integration for live screen updates.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/hospital-queue-system",
+    "stack": "Next Level 🆙",
+    "features": ["Live Queue Tracking", "Emergency Override", "Department Routing"],
+    "envVariables": ["PORT", "DATABASE_URL", "WS_PORT"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Socket.io", "Express"]
+      }
+    ]
+  },
+  {
+    "name": "Vidary Studio",
+    "title": "Vidary AI Video Generator",
+    "slug": "vidary",
+    "desc": "An AI-powered platform that transforms text prompts into stunning, informative short videos using advanced Gemini video models. Features a chat-based interface built for creators and educators.",
+    "industry": "Entertainment",
+    "challenge": "Handling resource-intensive AI video generation requests asynchronously without blocking the main thread.",
+    "solution": "Integrated job queues and serverless functions to process and store generated AI videos efficiently.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/vidary",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Text-to-Video Generation", "Chat Interface", "Video Asset Management"],
+    "envVariables": ["PORT", "DATABASE_URL", "GEMINI_API_KEY", "AWS_S3_BUCKET"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "AI Models"]
+      }
+    ]
+  },
+  {
+    "name": "HireHub Frontend",
+    "title": "Hire Hub UI Interface",
+    "slug": "hire-hub-ui",
+    "desc": "The dynamic and interactive frontend application for Hire Hub, providing recruiters and applicants with a seamless, accessible, and fast web experience.",
+    "industry": "Productivity",
+    "challenge": "Ensuring a fully accessible and responsive layout across all device types.",
+    "solution": "Leveraged React and Tailwind CSS to build a component-driven, highly accessible interface.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/hire-hub-ui",
+    "stack": "Next Level 🆙",
+    "features": ["Component Library", "Client-side Routing", "State Management"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "React", "Tailwind CSS"]
+      }
+    ]
+  },
+  {
+    "name": "Shiksha ERP",
+    "title": "Shiksha RCPIT Educational ERP",
+    "slug": "shiksha-rcpit",
+    "desc": "A comprehensive Enterprise Resource Planning (ERP) system tailored specifically for RCPIT. It digitizes academic tracking, attendance, inventory, and faculty management.",
+    "industry": "Education",
+    "challenge": "Aggregating scattered academic data into a single, cohesive, and queryable system.",
+    "solution": "Utilized Python scripts and Jupyter Notebooks for initial data cleaning, followed by a robust relational database design.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/shiksha-rcpit",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Attendance Tracking", "Grade Management", "Data Analytics"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["Jupyter Notebook", "Python", "Pandas"]
+      }
+    ]
+  },
+  {
+    "name": "EmotiCrypt",
+    "title": "Emoticon Encrypter",
+    "slug": "emoticon-encrypter",
+    "desc": "A fun and innovative cybersecurity tool that encrypts standard text messages into a string of emojis, providing a unique layer of obfuscation for casual communications.",
+    "industry": "Social Media",
+    "challenge": "Mapping complex character sets to specific emojis while ensuring complete reversibility.",
+    "solution": "Developed a custom bidirectional encoding algorithm using JavaScript dictionaries.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/emoticon-encrypter",
+    "stack": "MERN Magic ✨",
+    "features": ["Text-to-Emoji Encoding", "Emoji-to-Text Decoding", "Clipboard Integration"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["JavaScript", "HTML", "CSS"]
+      }
+    ]
+  },
+  {
+    "name": "Rupya Scanner",
+    "title": "Rupya Pehchano AI App",
+    "slug": "rupya-pehchano",
+    "desc": "An assistive technology application designed to help visually impaired users identify Indian currency notes accurately using machine learning and computer vision.",
+    "industry": "Finance",
+    "challenge": "Achieving high accuracy in currency recognition under varying lighting and camera quality conditions.",
+    "solution": "Implemented a fine-tuned image classification model accessible via a lightweight mobile-friendly PWA.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/Rupya-Pehchano",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Real-time Currency Detection", "Voice Feedback", "Offline Mode Support"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "TensorFlow", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "SREIR Portal",
+    "title": "SREIR College ERP System",
+    "slug": "sreir-erp",
+    "desc": "A robust campus management ERP designed for SREIR College. Built with Next.js, MongoDB, and DaisyUI to handle student registrations, academic records, and institutional communications.",
+    "industry": "Education",
+    "challenge": "Creating an intuitive UI that administrative staff could easily adopt without extensive training.",
+    "solution": "Leveraged DaisyUI for clean, accessible component design and Next.js for swift page transitions.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/sreir-erp",
+    "stack": "Next Level 🆙",
+    "features": ["Student Portal", "Admin Dashboard", "Notice Board Integration"],
+    "envVariables": ["PORT", "DATABASE_URL", "MONGO_URI"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "MongoDB", "DaisyUI"]
+      }
+    ]
+  },
+  {
+    "name": "KrishiSathi Platform",
+    "title": "Krishi Sathi Agritech App",
+    "slug": "krishi-sathi",
+    "desc": "An agricultural technology platform aimed at assisting farmers with real-time weather updates, crop market prices, and farming best practices to maximize yield and profitability.",
+    "industry": "Food & Beverage",
+    "challenge": "Delivering data quickly to rural areas with potentially low internet bandwidth.",
+    "solution": "Designed a highly optimized, caching-first architecture to ensure offline capabilities and fast loading.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/Krishi-Sathi",
+    "stack": "Next Level 🆙",
+    "features": ["Weather Forecasting", "Market Price Tracker", "Multilingual Support"],
+    "envVariables": ["PORT", "DATABASE_URL", "WEATHER_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "React Native", "Node.js"]
+      }
+    ]
+  },
+  {
+    "name": "Parkify Smart",
+    "title": "Prakify Smart Parking System",
+    "slug": "prakify",
+    "desc": "A comprehensive smart parking management system that tracks available parking spots in real-time, allowing users to pre-book slots and reducing urban traffic congestion.",
+    "industry": "Real Estate",
+    "challenge": "Synchronizing real-time parking slot availability across multiple active users.",
+    "solution": "Utilized MongoDB change streams and Next.js server actions to provide instant UI updates.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/prakify",
+    "stack": "Next Level 🆙",
+    "features": ["Spot Booking", "Real-time Availability Map", "Payment Gateway Integration"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "MongoDB", "DaisyUI"]
+      }
+    ]
+  },
+  {
+    "name": "InstaAnalyzer AI",
+    "title": "Insta Plus AI Analytics",
+    "slug": "insta-plus-ai",
+    "desc": "An advanced social media analytics tool that leverages the Apify API to perform deep analysis of Instagram profiles, extracting engagement metrics, follower demographics, and content trends.",
+    "industry": "Social Media",
+    "challenge": "Handling large JSON payloads from the Apify API and processing the data into readable charts.",
+    "solution": "Implemented efficient data aggregation pipelines in TypeScript to transform raw data into visualization-ready formats.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/insta-plus-ai",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Engagement Rate Calculation", "Post Performance Graphs", "Data Export"],
+    "envVariables": ["PORT", "DATABASE_URL", "APIFY_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "Apify"]
+      }
+    ]
+  },
+  {
+    "name": "Pramaan Verify",
+    "title": "Pramaan Patra Certificate System",
+    "slug": "pramaan-patra",
+    "desc": "A secure digital certification platform enabling institutions to issue, manage, and verify authentic certificates digitally, mitigating the risk of credential forgery.",
+    "industry": "Education",
+    "challenge": "Creating a tamper-proof verification mechanism for issued certificates.",
+    "solution": "Generated unique cryptographic hashes for each certificate, stored securely in the database for instant verification.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/pramaan-patra",
+    "stack": "Next Level 🆙",
+    "features": ["Certificate Generation", "QR Code Verification", "Bulk Issuing"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Node.js", "PDF-lib"]
+      }
+    ]
+  },
+  {
+    "name": "Surakshit Vault",
+    "title": "Surakshit Decentralized Data Vault",
+    "slug": "surakshit-data-vault",
+    "desc": "A decentralized, blockchain-based cloud storage solution designed specifically for Disaster Management Systems, ensuring critical data remains accessible and immutable during crises.",
+    "industry": "Productivity",
+    "challenge": "Ensuring 100% data uptime and protection against single points of failure.",
+    "solution": "Integrated IPFS (InterPlanetary File System) via TypeScript smart contracts for decentralized redundancy.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/surakshit-data-vault",
+    "stack": "Blockchain Builders ⛓️",
+    "features": ["Decentralized Storage", "Immutability Logs", "End-to-End Encryption"],
+    "envVariables": ["PORT", "DATABASE_URL", "WEB3_PROVIDER_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Solidity", "IPFS"]
+      }
+    ]
+  },
+  {
+    "name": "PhishGuard AI",
+    "title": "Phish Guard Threat Detection",
+    "slug": "phish-guard",
+    "desc": "A cutting-edge cybersecurity application utilizing Machine Learning and Explainable AI (XAI) to detect and flag spam emails and SMS phishing attempts, built with Next.js and Python.",
+    "industry": "Productivity",
+    "challenge": "Providing transparent reasoning for why a message was flagged as spam (Explainability).",
+    "solution": "Integrated Python ML models via an API, outputting confidence scores and decision trees to the Next.js frontend.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/phish-guard",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Spam Classification", "Explainable AI Insights", "Threat Dashboard"],
+    "envVariables": ["PORT", "DATABASE_URL", "PYTHON_API_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Python", "Next.js", "Scikit-Learn"]
+      }
+    ]
+  },
+  {
+    "name": "MukhPass Vision",
+    "title": "Mukh Pass Smart Attendance",
+    "slug": "mukh-pass",
+    "desc": "A smart, AI-powered face recognition system that automates employee or student attendance. Combines the power of Next.js for the UI and Python's face_recognition library for backend processing.",
+    "industry": "Productivity",
+    "challenge": "Accurately identifying faces in a fast-moving, multi-person environment.",
+    "solution": "Created a hybrid architecture where WebRTC handles live feeds and Python rapidly processes frame embeddings.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/mukh-pass",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Facial Recognition", "Automated Attendance Logging", "Admin Reports"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Python", "OpenCV"]
+      }
+    ]
+  },
+  {
+    "name": "CodeGenie IDE",
+    "title": "CodeGenie AI Code Editor",
+    "slug": "codegenie-ai",
+    "desc": "An Electron-based, AI-augmented code editor similar to VS Code. Features built-in Language Server Protocol (LSP) support and a voice-enabled AI chat to assist developers in writing, debugging, and refactoring code.",
+    "industry": "Productivity",
+    "challenge": "Integrating AI seamlessly into the local development environment without causing high CPU overhead.",
+    "solution": "Built a lightweight Electron wrapper and offloaded heavy AI computations to a cloud API.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/codegenie-ai",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Voice Commands", "AI Code Completion", "LSP Integration"],
+    "envVariables": ["PORT", "DATABASE_URL", "OPENAI_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Electron JS", "Monaco Editor"]
+      }
+    ]
+  },
+  {
+    "name": "PrecisionBake Pro",
+    "title": "Precision Baking Companion",
+    "slug": "precision-baking",
+    "desc": "A specialized application for professional bakers and culinary enthusiasts, offering highly precise recipe scaling, ingredient substitution calculations, and step-by-step timer management.",
+    "industry": "Food & Beverage",
+    "challenge": "Handling complex fractional math for accurate recipe scaling.",
+    "solution": "Implemented specialized utility functions in TypeScript to manage exact unit conversions.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/precision-baking",
+    "stack": "Next Level 🆙",
+    "features": ["Recipe Scaling", "Unit Conversions", "Multi-Stage Timers"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "React"]
+      }
+    ]
+  },
+  {
+    "name": "SatyaChain Authenticator",
+    "title": "Satya Chain Anti-Counterfeit",
+    "slug": "satya-chain",
+    "desc": "A blockchain-based product verification system designed to combat counterfeiting. Consumers can scan product codes to trace the entire supply chain journey and verify product authenticity.",
+    "industry": "E-commerce",
+    "challenge": "Ensuring the physical product securely links to the digital blockchain ledger.",
+    "solution": "Utilized NFC tags and secure QR codes paired with smart contracts for immutable product identity.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/satya-chain",
+    "stack": "Blockchain Builders ⛓️",
+    "features": ["Product Tracing", "Immutable Ledger", "QR Code Scanning"],
+    "envVariables": ["PORT", "DATABASE_URL", "INFURA_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Web3.js", "Solidity"]
+      }
+    ]
+  },
+  {
+    "name": "VidyaRakshak Monitor",
+    "title": "Vidya Rakshak Campus Security",
+    "slug": "vidya-rakshak",
+    "desc": "An advanced campus surveillance and management tool aimed at tracking student whereabouts during academic hours to reduce truancy and enhance student safety.",
+    "industry": "Education",
+    "challenge": "Balancing effective monitoring with student privacy and data security.",
+    "solution": "Implemented anonymized data logging and restricted RBAC (Role-Based Access Control) for administrative use only.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/vidya-rakshak",
+    "stack": "Next Level 🆙",
+    "features": ["Location Tracking", "Automated Truancy Alerts", "Privacy-first Logging"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Node.js"]
+      }
+    ]
+  },
+  {
+    "name": "DeepShield Sentinel",
+    "title": "DeepShield AI Security",
+    "slug": "deepsheild-ai",
+    "desc": "A deep learning initiative focused on identifying network intrusions and malicious patterns within traffic data, utilizing complex neural networks modeled in Jupyter Notebooks.",
+    "industry": "Productivity",
+    "challenge": "Training models on massive network packet datasets effectively.",
+    "solution": "Used Pandas and optimized data batching in Jupyter to train PyTorch models systematically.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/Deepsheild-ai",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Network Traffic Analysis", "Intrusion Detection", "Model Visualizations"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["Jupyter Notebook", "Python", "PyTorch"]
+      }
+    ]
+  },
+  {
+    "name": "EmotiveAI Companion",
+    "title": "Emotive AI Mood Tracker",
+    "slug": "emotive-ai",
+    "desc": "A wellness and mental health application that uses AI to analyze user inputs and suggest interventions, music, or activities aimed at positively altering their mood.",
+    "industry": "Healthcare",
+    "challenge": "Accurately inferring user sentiment from brief textual inputs.",
+    "solution": "Integrated Natural Language Processing (NLP) models to map text to a multidimensional emotion spectrum.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/emotive-ai",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Sentiment Analysis", "Mood Logging", "Personalized Interventions"],
+    "envVariables": ["PORT", "DATABASE_URL", "NLP_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "React Native", "Python API"]
+      }
+    ]
+  },
+  {
+    "name": "NeuroStream Engine",
+    "title": "Neuro Stream Data Pipeline",
+    "slug": "neuro-stream",
+    "desc": "A high-performance data streaming platform designed to handle complex event processing and real-time analytics, suitable for IoT and biometric data aggregation.",
+    "industry": "Healthcare",
+    "challenge": "Maintaining high throughput with zero data loss under heavy load.",
+    "solution": "Implemented a distributed messaging queue architecture natively integrated with TypeScript microservices.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/neuro-stream",
+    "stack": "Next Level 🆙",
+    "features": ["High-throughput Event Streaming", "Real-time Dashboard", "Fault Tolerance"],
+    "envVariables": ["PORT", "DATABASE_URL", "KAFKA_BROKER"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Kafka", "Node.js"]
+      }
+    ]
+  },
+  {
+    "name": "Opportune Tracker",
+    "title": "Opportune Habit App",
+    "slug": "opportune",
+    "desc": "A productivity and habit-tracking application that gamifies personal goals, helping users discover the right opportunities to build lasting positive routines.",
+    "industry": "Productivity",
+    "challenge": "Keeping users engaged and motivated over long periods.",
+    "solution": "Introduced gamification elements like streaks, badges, and interactive charts built with React.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/opportune",
+    "stack": "Next Level 🆙",
+    "features": ["Habit Streaks", "Gamification Mechanics", "Progress Charts"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "React", "Firebase"]
+      }
+    ]
+  },
+  {
+    "name": "KapusSwasthya Vision",
+    "title": "Cotton Disease Prediction AI",
+    "slug": "kapus-swasthya-cotton-diseases-predicition",
+    "desc": "An agricultural AI tool specifically trained to identify diseases in cotton crops via leaf images. It provides farmers with quick diagnoses and pesticide recommendations.",
+    "industry": "Food & Beverage",
+    "challenge": "Deploying a heavy CNN image model to run efficiently on mobile browsers.",
+    "solution": "Converted the trained model to TensorFlow.js format for fast, client-side inference.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/kapus-swasthya-cotton-diseases-predicition",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Image Upload/Camera Capture", "Disease Classification", "Treatment Suggestions"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "TensorFlow.js"]
+      }
+    ]
+  },
+  {
+    "name": "SafeSurf Extension",
+    "title": "Malicious Website Blocker",
+    "slug": "malicious-website",
+    "desc": "A browser extension designed to protect users by cross-referencing URLs in real-time against a database of known phishing, malware, and malicious sites.",
+    "industry": "Productivity",
+    "challenge": "Checking URLs against large blacklists without adding noticeable latency to page loads.",
+    "solution": "Implemented an optimized local cache mechanism utilizing Chrome Extension Storage APIs.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/Malicious-website",
+    "stack": "Extension X 🚀",
+    "features": ["Real-time URL Scanning", "Custom Whitelists", "Threat Alerts"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Browser Extension API"]
+      }
+    ]
+  },
+  {
+    "name": "JS Mastery 90",
+    "title": "90 Days of JavaScript Practice",
+    "slug": "90-days-of-javascript",
+    "desc": "A comprehensive compilation of 90 daily JavaScript projects and algorithms designed to master vanilla JS, DOM manipulation, and modern ES6+ features. Includes a live Digital Clock project.",
+    "industry": "Education",
+    "challenge": "Creating distinct, progressive learning projects daily.",
+    "solution": "Structured the repository logically with increasing difficulty, utilizing clean, vanilla JavaScript.",
+    "liveLink": "https://digital-clock-codeharman.vercel.app",
+    "github": "https://github.com/Scammerpatil/90-days-of-javascript",
+    "stack": "MERN Magic ✨",
+    "features": ["DOM Manipulation Examples", "Algorithm Implementations", "Vanilla JS Architecture"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["JavaScript", "HTML", "CSS"]
+      }
+    ]
+  },
+  {
+    "name": "EduCloud Admin",
+    "title": "EduCloud Console",
+    "slug": "educloud-console",
+    "desc": "A centralized administration console for educational institutions to manage cloud resources, digital libraries, and virtual classrooms seamlessly.",
+    "industry": "Education",
+    "challenge": "Aggregating multiple cloud APIs into a single, unified dashboard.",
+    "solution": "Built a backend-for-frontend (BFF) layer in Next.js to aggregate and simplify API responses.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/educloud-console",
+    "stack": "Next Level 🆙",
+    "features": ["Resource Provisioning", "User Management", "Cloud Billing Analytics"],
+    "envVariables": ["PORT", "DATABASE_URL", "AWS_ACCESS_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "GenoSpark CMS",
+    "title": "Headless Content Management System",
+    "slug": "cms",
+    "desc": "A flexible, headless Content Management System (CMS) that empowers creators to manage dynamic content, blogs, and media assets, delivering them swiftly via API to any frontend.",
+    "industry": "Productivity",
+    "challenge": "Providing dynamic schema generation for varied content types.",
+    "solution": "Implemented a flexible JSON-based document schema on top of PostgreSQL.",
+    "liveLink": "https://genospark-cms.vercel.app",
+    "github": "https://github.com/Scammerpatil/cms",
+    "stack": "Next Level 🆙",
+    "features": ["Headless API Delivery", "Dynamic Content Types", "Media Asset Library"],
+    "envVariables": ["PORT", "DATABASE_URL", "CLOUDINARY_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "Prisma"]
+      }
+    ]
+  },
+  {
+    "name": "RenoSpace Platform",
+    "title": "Reno Real Estate Platform",
+    "slug": "reno-platform-assignment",
+    "desc": "A property technology platform showcasing modern UI/UX practices for real estate listings, featuring interactive maps, property filtering, and high-quality image galleries.",
+    "industry": "Real Estate",
+    "challenge": "Rendering high volumes of image-heavy property cards seamlessly.",
+    "solution": "Utilized Next.js Image optimization and lazy loading techniques for fluid performance.",
+    "liveLink": "https://reno-platform-assignment.vercel.app",
+    "github": "https://github.com/Scammerpatil/reno-platform-assignment",
+    "stack": "Next Level 🆙",
+    "features": ["Property Filtering", "Interactive Maps", "Image Optimization"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "CalcPro",
+    "title": "Advanced Web Calculator",
+    "slug": "calculator",
+    "desc": "A sleek, purely frontend mathematical calculator featuring standard operations, scientific functions, and a history log, built fundamentally with raw HTML/CSS/JS.",
+    "industry": "Productivity",
+    "challenge": "Handling floating-point math precision errors natively in JavaScript.",
+    "solution": "Implemented custom parsing functions to fix rounding errors associated with IEEE 754.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/Calculator",
+    "stack": "MERN Magic ✨",
+    "features": ["Scientific Functions", "Calculation History", "Responsive Grid Layout"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["HTML", "CSS", "JavaScript"]
+      }
+    ]
+  },
+  {
+    "name": "CertiTrack Dashboard",
+    "title": "CertiTrack Credential Manager",
+    "slug": "certitrack",
+    "desc": "An intuitive platform for professionals to store, track, and share their professional certifications and licenses, ensuring they never miss a renewal deadline.",
+    "industry": "Education",
+    "challenge": "Automating email reminders based on expiration dates.",
+    "solution": "Integrated cron jobs via Node.js to routinely check dates and dispatch SendGrid emails.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/CertiTrack",
+    "stack": "Next Level 🆙",
+    "features": ["Expiry Alerts", "Document Storage", "Public Shareable Links"],
+    "envVariables": ["PORT", "DATABASE_URL", "SENDGRID_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "Road2Tech Hub",
+    "title": "Road2Tech Career Roadmap",
+    "slug": "road2tech",
+    "desc": "An educational platform providing aspiring software engineers with interactive, curated roadmaps and learning resources to master various technical disciplines.",
+    "industry": "Education",
+    "challenge": "Creating an interactive, node-based visual roadmap UI.",
+    "solution": "Utilized React Flow to build drag-and-drop, interactive learning paths.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/road2tech",
+    "stack": "Next Level 🆙",
+    "features": ["Interactive Learning Paths", "Resource Aggregation", "Progress Tracking"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "React Flow", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "Rentify Market",
+    "title": "Rentify P2P Rentals",
+    "slug": "rentify",
+    "desc": "A peer-to-peer rental marketplace connecting people who have items to rent (cameras, tools, etc.) with those who need them temporarily, featuring a secure booking system.",
+    "industry": "E-commerce",
+    "challenge": "Managing complex booking calendars to prevent date overlaps.",
+    "solution": "Developed a robust date-range checking algorithm in the Node.js backend.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/rentify",
+    "stack": "MERN Magic ✨",
+    "features": ["Booking Calendar", "Item Listings", "User Ratings"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["JavaScript", "React", "Node.js"]
+      }
+    ]
+  },
+  {
+    "name": "MediTrack Systems",
+    "title": "Medi Track Health Logger",
+    "slug": "medi-track",
+    "desc": "A personal health logging application enabling users to diligently track their medication schedules, symptoms, and doctor appointments in a secure environment.",
+    "industry": "Healthcare",
+    "challenge": "Ensuring a mobile-first, highly accessible UI for elderly users.",
+    "solution": "Adopted large-touch-target design principles and high-contrast styling using Tailwind CSS.",
+    "liveLink": "https://medi-track-eosin.vercel.app",
+    "github": "https://github.com/Scammerpatil/medi-track",
+    "stack": "Next Level 🆙",
+    "features": ["Medication Reminders", "Symptom Journaling", "Mobile-first UI"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "BlockEvidence EMS",
+    "title": "Blockchain Evidence Management System",
+    "slug": "blockchain-ems",
+    "desc": "A cutting-edge forensic Evidence Management System utilizing blockchain technology to ensure an unbreakable chain of custody and immutable evidence logs for law enforcement.",
+    "industry": "Productivity",
+    "challenge": "Ensuring cryptographic hashes of files match across the network securely.",
+    "solution": "Integrated SHA-256 hashing alongside Ethereum smart contracts to verify file integrity.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/blockchain-EMS",
+    "stack": "Blockchain Builders ⛓️",
+    "features": ["Chain of Custody Tracking", "Immutable Records", "File Hashing"],
+    "envVariables": ["PORT", "DATABASE_URL", "ETH_RPC_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Solidity", "Ethers.js"]
+      }
+    ]
+  },
+  {
+    "name": "Sketch2Img AI",
+    "title": "Sketch to Image AI Generator",
+    "slug": "sketch-2-image",
+    "desc": "An innovative creative tool that leverages advanced generative AI models to transform rough user sketches into fully realized, high-fidelity digital artworks instantly.",
+    "industry": "Entertainment",
+    "challenge": "Handling HTML5 canvas drawing data and transmitting it efficiently to an AI backend.",
+    "solution": "Serialized canvas data into compressed Base64 strings before dispatching to the Stable Diffusion API.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/sketch-2-image",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Canvas Drawing Interface", "Real-time AI Generation", "Artwork Exporting"],
+    "envVariables": ["PORT", "DATABASE_URL", "AI_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "HTML5 Canvas", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "GirhaSetu Portal",
+    "title": "Girha Setu Property Connect",
+    "slug": "girha-setu",
+    "desc": "A localized real estate and housing connection platform bridging the gap between property owners, agents, and buyers, specifically tailored for regional Indian markets.",
+    "industry": "Real Estate",
+    "challenge": "Implementing complex multi-criteria property searches rapidly.",
+    "solution": "Used complex MongoDB indexing and aggregation pipelines to return search results swiftly.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/girha-setu",
+    "stack": "Next Level 🆙",
+    "features": ["Advanced Property Search", "Agent Profiles", "Localized Market Data"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "MongoDB"]
+      }
+    ]
+  },
+  {
+    "name": "MediFind Directory",
+    "title": "Medi Find Clinic Locator",
+    "slug": "medi-find",
+    "desc": "A geolocation-based healthcare directory application that assists users in quickly locating nearby clinics, pharmacies, and specialized doctors during emergencies.",
+    "industry": "Healthcare",
+    "challenge": "Providing accurate geospatial querying based on user location.",
+    "solution": "Utilized PostGIS extensions in a PostgreSQL database for rapid coordinate radius searching.",
+    "liveLink": "https://medi-find-novacops.vercel.app",
+    "github": "https://github.com/Scammerpatil/medi-find",
+    "stack": "Next Level 🆙",
+    "features": ["Geospatial Search", "Clinic Reviews", "Emergency Routing"],
+    "envVariables": ["PORT", "DATABASE_URL", "MAPBOX_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "PostgreSQL"]
+      }
+    ]
+  },
+  {
+    "name": "MedChain Secure",
+    "title": "MedChain Medical Vault",
+    "slug": "medchain-vault",
+    "desc": "A blockchain-secured vault for Electronic Health Records (EHR). It guarantees patient data privacy, allowing patients to grant temporary, verifiable access to healthcare providers.",
+    "industry": "Healthcare",
+    "challenge": "Balancing absolute data privacy with necessary medical accessibility.",
+    "solution": "Implemented zero-knowledge proofs (ZKP) and decentralized identity protocols.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/medChain-vault",
+    "stack": "Blockchain Builders ⛓️",
+    "features": ["Decentralized Identity", "Patient-controlled Access", "Audit Trails"],
+    "envVariables": ["PORT", "DATABASE_URL", "WEB3_PROVIDER"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Solidity", "IPFS"]
+      }
+    ]
+  },
+  {
+    "name": "StenoSecure Text",
+    "title": "Steno Secure Steganography",
+    "slug": "steno-secure",
+    "desc": "A digital steganography application allowing users to securely hide encrypted textual messages within the pixel data of standard image files without noticeably altering visual quality.",
+    "industry": "Productivity",
+    "challenge": "Manipulating image bits natively in the browser without backend processing.",
+    "solution": "Utilized HTML5 Canvas Context and typed arrays (Uint8ClampedArray) for fast bitwise operations.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/steno-secure",
+    "stack": "Next Level 🆙",
+    "features": ["Image Steganography", "AES-256 Text Encryption", "Browser-side Processing"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "CryptoJS"]
+      }
+    ]
+  },
+  {
+    "name": "LeafScan AI",
+    "title": "Plant Disease Detection Tool",
+    "slug": "plant-disease-detection",
+    "desc": "An agricultural diagnostic tool leveraging machine learning to detect diseases in various plant species. Users upload photos to receive instant analysis and remediation advice.",
+    "industry": "Food & Beverage",
+    "challenge": "Ensuring the AI model categorizes varied species correctly.",
+    "solution": "Implemented a pre-filtering mechanism to classify the plant type before running the disease-specific CNN.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/plant-disease-detection",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Multi-species Support", "Instant Diagnostics", "Remediation Guide"],
+    "envVariables": ["PORT", "DATABASE_URL", "ML_MODEL_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Python backend", "React"]
+      }
+    ]
+  },
+  {
+    "name": "CrimeTrace Forensics",
+    "title": "Crime Trace AI Analyst",
+    "slug": "crime-trace-ai",
+    "desc": "A data analysis and visualization tool intended for law enforcement to identify crime hotspots, track incident trends, and predict potential future infractions using statistical AI.",
+    "industry": "Productivity",
+    "challenge": "Visualizing massive sets of temporal-spatial data coherently.",
+    "solution": "Integrated advanced D3.js and Mapbox GL for interactive, timeline-based heatmaps.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/crime-trace-ai",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Hotspot Heatmaps", "Predictive Analytics", "Incident Timeline"],
+    "envVariables": ["PORT", "DATABASE_URL", "MAPBOX_TOKEN"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "D3.js", "Python API"]
+      }
+    ]
+  },
+  {
+    "name": "DatasetForge AI",
+    "title": "Prompt to Dataset Generator",
+    "slug": "prompt-2-dataset",
+    "desc": "A developer productivity utility that uses LLMs (Large Language Models) to autonomously generate vast, structured mock datasets based on simple user prompts, ideal for testing.",
+    "industry": "Productivity",
+    "challenge": "Ensuring the generated JSON/CSV data maintains strict schema adherence without hallucinations.",
+    "solution": "Utilized strict system prompts and validation libraries (Zod) to parse and correct AI outputs.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/prompt-2-dataset",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Schema Validation", "Multiple Export Formats (JSON/CSV)", "AI Generation"],
+    "envVariables": ["PORT", "DATABASE_URL", "OPENAI_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "Zod"]
+      }
+    ]
+  },
+  {
+    "name": "OncoVision AI",
+    "title": "RealTumorDetect Model",
+    "slug": "realtumordetect",
+    "desc": "An advanced deep learning model constructed in Jupyter Notebooks to analyze MRI and X-ray scans for the early detection and segmentation of tumors with high clinical accuracy.",
+    "industry": "Healthcare",
+    "challenge": "Dealing with highly imbalanced medical datasets during model training.",
+    "solution": "Applied advanced data augmentation and loss-weighting techniques in PyTorch.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/realtumordetect",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Image Segmentation", "Medical Scan Analysis", "High Precision Recall"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["Jupyter Notebook", "Python", "PyTorch", "OpenCV"]
+      }
+    ]
+  },
+  {
+    "name": "YieldPredict Pro",
+    "title": "Crop Yield Production Engine",
+    "slug": "crop-yield-production",
+    "desc": "An agricultural forecasting application that integrates historical weather data, soil quality metrics, and crop types to predict harvest yields, aiding in supply chain planning.",
+    "industry": "Food & Beverage",
+    "challenge": "Aggregating multiple distinct datasets into a single predictive formula.",
+    "solution": "Built a robust backend API that queries multiple meteorological and soil databases concurrently.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/crop-yield-production",
+    "stack": "Next Level 🆙",
+    "features": ["Yield Forecasting", "Soil Data Integration", "Historical Trend Analysis"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Node.js", "PostgreSQL"]
+      }
+    ]
+  },
+  {
+    "name": "TributeConnect Social",
+    "title": "Tribute Connect Platform",
+    "slug": "tribute-connect",
+    "desc": "A respectful, dedicated social platform for families and friends to memorialize loved ones, share memories, and organize tribute events collaboratively.",
+    "industry": "Social Media",
+    "challenge": "Ensuring a highly respectful, ad-free, and secure environment for sensitive personal media.",
+    "solution": "Implemented strict privacy controls and a scalable cloud-storage architecture for media hosting.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/tribute-connect",
+    "stack": "Next Level 🆙",
+    "features": ["Memorial Pages", "Collaborative Galleries", "Event Scheduling"],
+    "envVariables": ["PORT", "DATABASE_URL", "AWS_S3_BUCKET"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "FinScore AI",
+    "title": "Loan Predictor Intelligence",
+    "slug": "loan-predictor",
+    "desc": "A financial analysis tool that evaluates user financial data, credit history, and employment status to predict the likelihood of loan approval, mitigating risk for lenders.",
+    "industry": "Finance",
+    "challenge": "Creating an unbiased predictive model adhering to financial regulations.",
+    "solution": "Carefully selected model features and utilized interpretable ML algorithms to avoid black-box bias.",
+    "liveLink": "https://loan-predictor-olive.vercel.app",
+    "github": "https://github.com/Scammerpatil/loan-predictor",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Risk Assessment", "Approval Probability", "Data Visualization"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Python ML API", "React"]
+      }
+    ]
+  },
+  {
+    "name": "TaskFlow Agile",
+    "title": "Task Flow Kanban Manager",
+    "slug": "task-flow",
+    "desc": "A highly interactive, visually appealing Kanban-style project management tool enabling teams to coordinate workflows, track sprints, and manage daily task assignments efficiently.",
+    "industry": "Productivity",
+    "challenge": "Creating a frictionless, performant drag-and-drop interface across desktop and mobile.",
+    "solution": "Integrated react-beautiful-dnd with optimized state updates to ensure 60fps animations.",
+    "liveLink": "https://task-flow-novacops.vercel.app",
+    "github": "https://github.com/Scammerpatil/task-flow",
+    "stack": "Next Level 🆙",
+    "features": ["Drag-and-Drop Kanban", "Team Collaboration", "Deadline Tracking"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "Zustand"]
+      }
+    ]
+  },
+  {
+    "name": "WanderMate Hub",
+    "title": "Travel Buddy Finder System",
+    "slug": "travel-buddy-finder-system",
+    "desc": "A social networking application specifically tailored for travelers, allowing users to match with compatible travel companions based on itineraries, interests, and budgets.",
+    "industry": "Travel",
+    "challenge": "Creating a robust matching algorithm incorporating timeframes and geographic coordinates.",
+    "solution": "Implemented a multi-factor matching engine querying a NoSQL database for flexible user profiles.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/travel-buddy-finder-system",
+    "stack": "Next Level 🆙",
+    "features": ["Itinerary Matching", "In-app Chat", "Verified Profiles"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "React", "Node.js"]
+      }
+    ]
+  },
+  {
+    "name": "AuthFace Biometrics",
+    "title": "Facial Authentication System",
+    "slug": "facial-authentication-system",
+    "desc": "A robust, passwordless biometric authentication system providing seamless and highly secure login mechanisms via facial mapping and liveness detection.",
+    "industry": "Productivity",
+    "challenge": "Preventing spoofing attacks (e.g., using a photograph) during authentication.",
+    "solution": "Integrated liveness detection algorithms requiring users to perform specific micro-movements.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/facial-authentication-system",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Passwordless Login", "Liveness Detection", "Encrypted Biometrics"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "WebAuthn", "Python OpenCV"]
+      }
+    ]
+  },
+  {
+    "name": "PotholePatrol",
+    "title": "Road Fixer Crowdsourcing",
+    "slug": "road-fixer",
+    "desc": "A civic-tech crowdsourcing platform empowering citizens to report infrastructural damages like potholes or broken streetlights, automatically dispatching data to local authorities.",
+    "industry": "Productivity",
+    "challenge": "Handling large volumes of geo-tagged image uploads concurrently.",
+    "solution": "Leveraged cloud storage buckets with pre-signed URLs to offload direct image handling from the backend.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/Road-fixer",
+    "stack": "Next Level 🆙",
+    "features": ["Geo-tagging", "Civic Reporting Dashboard", "Status Tracking"],
+    "envVariables": ["PORT", "DATABASE_URL", "AWS_S3_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "React Native", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "ImgDiffy Engine",
+    "title": "Image 3 Diffy Visualizer",
+    "slug": "image-3-diffy",
+    "desc": "A specialized computer vision tool that highlights structural and pixel-level differences between multiple iterations of an image, highly useful for design QA and testing.",
+    "industry": "Productivity",
+    "challenge": "Computing pixel differences quickly without freezing the main browser thread.",
+    "solution": "Employed Web Workers to offload heavy pixel-array math calculations.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/Image-3-diffy",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Pixel-level Diffing", "Visual Highlight Overlays", "Batch Processing"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["Jupyter Notebook", "Python", "OpenCV"]
+      }
+    ]
+  },
+  {
+    "name": "MailMaven Automator",
+    "title": "Mail Maven Bulk Generator",
+    "slug": "mail-maven",
+    "desc": "A high-efficiency web-based tool for generating personalized certificates in bulk and orchestrating automated email distribution. Ideal for webinars, courses, and large events.",
+    "industry": "Productivity",
+    "challenge": "Preventing email API rate limits while sending thousands of emails.",
+    "solution": "Architected a Redis-backed job queue (BullMQ) to throttle and manage outbound email traffic.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/Mail-Maven",
+    "stack": "Next Level 🆙",
+    "features": ["Bulk Certificate Generation", "Automated Emailing", "Job Queue Dashboard"],
+    "envVariables": ["PORT", "DATABASE_URL", "SMTP_URL", "REDIS_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "React", "Node.js", "Redis"]
+      }
+    ]
+  },
+  {
+    "name": "TradePlus Insight",
+    "title": "Trade Plus AI Analytics",
+    "slug": "trade-plus-ai",
+    "desc": "A cutting-edge algorithmic trading dashboard that aggregates live market data and utilizes machine learning models to detect chart patterns and suggest market trends.",
+    "industry": "Finance",
+    "challenge": "Rendering high-frequency, real-time candlestick charts without UI lag.",
+    "solution": "Integrated lightweight charting libraries and optimized WebSocket payload parsing.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/trade-plus-ai",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Live Candlestick Charts", "AI Trend Predictions", "Portfolio Tracking"],
+    "envVariables": ["PORT", "DATABASE_URL", "FINANCE_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "TradingView Lightweight Charts"]
+      }
+    ]
+  },
+  {
+    "name": "Pramaan VerifyChain",
+    "title": "Praaman Check Blockchain System",
+    "slug": "praaman-check",
+    "desc": "A decentralized verification protocol providing organizations with a highly secure method of issuing and validating credentials on an immutable public ledger.",
+    "industry": "Education",
+    "challenge": "Lowering gas fees for bulk credential issuance on the blockchain.",
+    "solution": "Utilized a Layer-2 scaling solution (Polygon) and implemented Merkle Tree batching.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/praaman-check",
+    "stack": "Blockchain Builders ⛓️",
+    "features": ["Decentralized Verification", "Layer-2 Integration", "Batch Issuing"],
+    "envVariables": ["PORT", "DATABASE_URL", "POLYGON_RPC"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Solidity", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "KalaNirmata Scheduler",
+    "title": "Kalanirmata Timetable Generator",
+    "slug": "kalanirmata",
+    "desc": "An algorithmic scheduling system specifically engineered for educational institutions to automatically generate clash-free timetables accommodating complex faculty and room constraints.",
+    "industry": "Education",
+    "challenge": "Solving the NP-hard problem of scheduling without infinite looping.",
+    "solution": "Implemented a Genetic Algorithm optimization strategy in the backend to discover the best fit schedule.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/Kalanirmata",
+    "stack": "Next Level 🆙",
+    "features": ["Automated Conflict Resolution", "Export to PDF/Excel", "Faculty Preferences"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Node.js", "React"]
+      }
+    ]
+  },
+  {
+    "name": "Plateful Nutrition AI",
+    "title": "Plateful AI Dietician",
+    "slug": "plateful-ai",
+    "desc": "An intelligent culinary application that generates personalized meal plans and recipes based on user macros, dietary restrictions, and available pantry ingredients using AI.",
+    "industry": "Food & Beverage",
+    "challenge": "Translating subjective dietary preferences into exact nutritional mathematical targets.",
+    "solution": "Trained an intermediary model layer to convert natural language food constraints into precise API queries.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/plateful-ai",
+    "stack": "Brainy Bots 🤖",
+    "features": ["AI Recipe Generation", "Macro Tracking", "Pantry Inventory"],
+    "envVariables": ["PORT", "DATABASE_URL", "OPENAI_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "FaceFinder OSINT",
+    "title": "Facefinder AI Tracker",
+    "slug": "facefinder-ai",
+    "desc": "A powerful Open Source Intelligence (OSINT) tool integrating advanced facial recognition APIs to assist in finding matching public digital footprints based on a single image.",
+    "industry": "Productivity",
+    "challenge": "Handling intense API rate limiting from various integrated image-search providers.",
+    "solution": "Built a staggered queueing system that caches search results to prevent duplicate API hits.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/facefinder-ai",
+    "stack": "Brainy Bots 🤖",
+    "features": ["Reverse Image Search", "Biometric Matching", "Data Aggregation"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Node.js", "Python"]
+      }
+    ]
+  },
+  {
+    "name": "Lekhna Editor",
+    "title": "Lekhna Distraction-Free Writer",
+    "slug": "lekhna",
+    "desc": "A minimalist, highly optimized markdown editor designed for writers and developers. Focuses on providing a distraction-free environment with local-first auto-saving and rich text export.",
+    "industry": "Productivity",
+    "challenge": "Ensuring zero data loss for users working entirely offline.",
+    "solution": "Leveraged IndexedDB for robust, persistent local storage wrapping it with a seamless sync API.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/lekhna",
+    "stack": "Next Level 🆙",
+    "features": ["Markdown Parsing", "Offline First", "Distraction-Free Mode"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "React", "IndexedDB"]
+      }
+    ]
+  },
+  {
+    "name": "GreenThumb Market",
+    "title": "Gardeningstore E-commerce",
+    "slug": "gardeningstore",
+    "desc": "A robust e-commerce storefront specifically catering to gardening enthusiasts. Features complex inventory management, a seamless checkout process, and dynamic categorization for plants and tools.",
+    "industry": "E-commerce",
+    "challenge": "Handling complex shopping cart state alongside dynamic shipping cost calculations.",
+    "solution": "Implemented session-based cart management optimized within a custom PHP backend architecture.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/gardeningstore",
+    "stack": "PHP Power ⚙️",
+    "features": ["Shopping Cart", "Inventory Management", "Secure Checkout"],
+    "envVariables": ["PORT", "DATABASE_URL", "PAYMENT_GATEWAY_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["PHP", "MySQL", "JavaScript"]
+      }
+    ]
+  },
+  {
+    "name": "AgriChain Trust",
+    "title": "Agri Food Blockchain Tracer",
+    "slug": "agri-food-blockchain",
+    "desc": "A supply chain transparency platform that tracks agricultural produce from farm to fork using blockchain, guaranteeing organic certifications and fair trade practices.",
+    "industry": "Food & Beverage",
+    "challenge": "Making blockchain interactions user-friendly for non-technical farmers and consumers.",
+    "solution": "Built a frictionless Next.js frontend that abstracts all Web3 wallet interactions behind simple logins.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/agri-food-blockchain",
+    "stack": "Blockchain Builders ⛓️",
+    "features": ["Farm-to-Fork Tracking", "Organic Verification", "Smart Contracts"],
+    "envVariables": ["PORT", "DATABASE_URL", "POLYGON_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Solidity", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "PlantHealth Monitor",
+    "title": "PlantHealth IoT Dashboard",
+    "slug": "planthealth",
+    "desc": "An IoT-integrated platform for avid gardeners and farmers to continuously monitor soil moisture, sunlight, and nutrient levels via connected hardware sensors.",
+    "industry": "Food & Beverage",
+    "challenge": "Ingesting and parsing continuous streams of sensor telemetry data.",
+    "solution": "Utilized MQTT protocols to lightweight the data payload directly into a time-series database.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/PlantHealth",
+    "stack": "Next Level 🆙",
+    "features": ["Sensor Telemetry", "Live Dashboard", "Automated Irrigation Alerts"],
+    "envVariables": ["PORT", "DATABASE_URL", "MQTT_BROKER"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Node.js", "InfluxDB"]
+      }
+    ]
+  },
+  {
+    "name": "GreenRevive Hub",
+    "title": "Green Revive Sustainability",
+    "slug": "green-revive",
+    "desc": "A community-driven sustainability platform encouraging eco-friendly practices. Features carbon footprint calculators, recycling guides, and local green event planning.",
+    "industry": "Social Media",
+    "challenge": "Creating an engaging, gamified system to encourage continuous ecological action.",
+    "solution": "Integrated an achievement API rewarding users with badges for logged sustainable activities.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/green-revive",
+    "stack": "Next Level 🆙",
+    "features": ["Carbon Footprint Calculator", "Community Forums", "Event Board"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "PostgreSQL"]
+      }
+    ]
+  },
+  {
+    "name": "YouSave Finance",
+    "title": "You Save Budgeting Assistant",
+    "slug": "you-save",
+    "desc": "A personal finance management application that intuitively tracks expenses, categorizes spending, and establishes dynamic budget goals to optimize personal savings.",
+    "industry": "Finance",
+    "challenge": "Automatically categorizing imported bank transactions accurately.",
+    "solution": "Implemented string-matching algorithms alongside user-defined categorization rules.",
+    "liveLink": "https://intelli-mark.vercel.app",
+    "github": "https://github.com/Scammerpatil/you-save",
+    "stack": "Next Level 🆙",
+    "features": ["Expense Tracking", "Budget Goals", "Financial Reporting"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "React", "Node.js"]
+      }
+    ]
+  },
+  {
+    "name": "CivicResolve Portal",
+    "title": "Civil Issue Resolution Desk",
+    "slug": "civilissueresolution",
+    "desc": "A structured ticketing system enabling citizens to log civil complaints directly to municipal authorities, tracking resolution progress via a transparent public dashboard.",
+    "industry": "Productivity",
+    "challenge": "Structuring complex departmental routing for varied types of civic complaints.",
+    "solution": "Developed a robust state-machine in PHP to handle ticket lifecycles and escalations.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/CivilIssueResolution",
+    "stack": "PHP Power ⚙️",
+    "features": ["Ticketing System", "Department Routing", "Public Resolution Dashboard"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["PHP", "MySQL", "Bootstrap"]
+      }
+    ]
+  },
+  {
+    "name": "AgriSupply Link",
+    "title": "Agri Food Supply Chain Manager",
+    "slug": "agri-food-supply-chain",
+    "desc": "A comprehensive logistics tool tailored for the agricultural sector, optimizing the transportation routes and storage capacities for perishable food items to minimize waste.",
+    "industry": "Food & Beverage",
+    "challenge": "Calculating optimal delivery routes considering varying shelf-lives of produce.",
+    "solution": "Integrated map APIs with custom sorting algorithms prioritizing perishability and distance.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/Agri-Food-Supply-Chain",
+    "stack": "MERN Magic ✨",
+    "features": ["Logistics Tracking", "Route Optimization", "Perishability Alerts"],
+    "envVariables": ["PORT", "DATABASE_URL", "MAP_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["JavaScript", "React", "Node.js"]
+      }
+    ]
+  },
+  {
+    "name": "AstroShield Defense",
+    "title": "Astro Shield Game Engine",
+    "slug": "astro-shield",
+    "desc": "An interactive, web-based space defense game showcasing complex collision physics, particle systems, and high-performance rendering within the modern browser environment.",
+    "industry": "Entertainment",
+    "challenge": "Maintaining a stable 60 Frames Per Second (FPS) while rendering hundreds of moving sprites.",
+    "solution": "Optimized the game loop using `requestAnimationFrame` and decoupled physics calculations from rendering logic.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/astro-shield",
+    "stack": "Next Level 🆙",
+    "features": ["HTML5 Canvas Game", "Particle Engine", "High Score Leaderboard"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "HTML5 Canvas", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "Trackonomy Logistics",
+    "title": "Trackonomy Fleet Tracker",
+    "slug": "trackonomy",
+    "desc": "A fleet management and economics tracker for delivery companies, providing granular data on vehicle fuel efficiency, driver performance, and overall delivery costs.",
+    "industry": "Productivity",
+    "challenge": "Aggregating continuous GPS and telemetry data into meaningful economic reports.",
+    "solution": "Used MongoDB aggregation pipelines to crunch large sets of telemetry points efficiently.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/trackonomy",
+    "stack": "MERN Magic ✨",
+    "features": ["Fleet Tracking", "Fuel Efficiency Reports", "Cost Analytics"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["JavaScript", "React", "Express", "MongoDB"]
+      }
+    ]
+  },
+  {
+    "name": "Gamanika Toll AI",
+    "title": "GPS Based Toll Collection",
+    "slug": "gamanika_gps_based_toll_collection_system",
+    "desc": "A modern alternative to physical toll plazas, utilizing precise GPS geofencing to automatically deduct toll charges when a vehicle traverses specific highway segments.",
+    "industry": "Travel",
+    "challenge": "Accurately resolving GPS drift to prevent false toll charges.",
+    "solution": "Implemented complex spatial mapping algorithms that snap raw GPS coordinates to known highway vectors.",
+    "liveLink": "https://gamanika-gps-based-toll-collection-system.vercel.app",
+    "github": "https://github.com/Scammerpatil/Gamanika_GPS_Based_Toll_Collection_System",
+    "stack": "Next Level 🆙",
+    "features": ["Geofencing", "Automated Billing", "Trip History Logs"],
+    "envVariables": ["PORT", "DATABASE_URL", "MAPS_API_KEY"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "PostGIS"]
+      }
+    ]
+  },
+  {
+    "name": "FaceTrack Pro",
+    "title": "FaceTrack Identity Manager",
+    "slug": "facetrack",
+    "desc": "A highly specialized identity management suite utilizing biometric facial mapping for secure facility access control, tailored for high-security enterprise environments.",
+    "industry": "Productivity",
+    "challenge": "Ensuring facial matching operations are completely secure and non-reversible.",
+    "solution": "Stored only mathematical vector embeddings of faces, never raw image data, ensuring privacy compliance.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/Facetrack",
+    "stack": "Next Level 🆙",
+    "features": ["Biometric Access Control", "Encrypted Embeddings", "Admin Audit Logs"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Python", "React"]
+      }
+    ]
+  },
+  {
+    "name": "LocalGov Diaries",
+    "title": "LG Data Dairies Dashboard",
+    "slug": "lg_data_dairies",
+    "desc": "A comprehensive data visualization dashboard created for Local Government entities to seamlessly log, track, and transparently publish their daily administrative and public works progress.",
+    "industry": "Productivity",
+    "challenge": "Presenting dense bureaucratic data in an accessible, public-friendly format.",
+    "solution": "Leveraged responsive charting libraries to transform raw tabular data into intuitive visual infographics.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/lg_data_dairies",
+    "stack": "Next Level 🆙",
+    "features": ["Public Transparency Dashboard", "Administrative Logging", "Data Export"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Next.js", "Recharts"]
+      }
+    ]
+  },
+  {
+    "name": "VidhyaRachna Builder",
+    "title": "VidhyaRachna ATS Resume Builder",
+    "slug": "vidhyarachna_the_resume_builder",
+    "desc": "A powerful, dynamic resume generation application designed to help students craft ATS-compliant (Applicant Tracking System) resumes through guided, intelligent templates.",
+    "industry": "Education",
+    "challenge": "Exporting pixel-perfect, highly formatted HTML to universally accepted PDF files.",
+    "solution": "Integrated Java-based PDF generation libraries (iText) on the backend for flawless document compilation.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/VidhyaRachna_The_Resume_Builder",
+    "stack": "Java Jolt ⚡",
+    "features": ["ATS-Friendly Templates", "Live Preview", "PDF Export"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["Java", "Spring Boot", "React"]
+      }
+    ]
+  },
+  {
+    "name": "RationFlow System",
+    "title": "Ration Management Platform",
+    "slug": "rationmanagementsystem",
+    "desc": "A digitized public distribution platform aimed at streamlining ration inventory management, ensuring transparent allocation, and reducing discrepancies in food supply.",
+    "industry": "Productivity",
+    "challenge": "Securing the allocation process to prevent fraudulent distributions.",
+    "solution": "Implemented a strict authentication flow linking beneficiary ID cards to secure database entries.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/RationManagementSystem",
+    "stack": "Next Level 🆙",
+    "features": ["Inventory Tracking", "Beneficiary Verification", "Distribution Logs"],
+    "envVariables": ["PORT", "DATABASE_URL"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["TypeScript", "Node.js", "Next.js"]
+      }
+    ]
+  },
+  {
+    "name": "WebShield Extension",
+    "title": "Malicious Website Web Extension",
+    "slug": "malicious-website-detection-web-extenstion",
+    "desc": "A sophisticated browser extension that actively intercepts and analyzes web traffic. It uses a Python backend running machine learning models to classify and block zero-day malicious domains.",
+    "industry": "Productivity",
+    "challenge": "Bridging a client-side browser extension with a heavy Python ML backend smoothly.",
+    "solution": "Constructed a highly optimized REST API in Python (FastAPI) for rapid URL evaluation.",
+    "liveLink": "",
+    "github": "https://github.com/Scammerpatil/Malicious-Website-Detection-Web-Extenstion",
+    "stack": "Extension X 🚀",
+    "features": ["Zero-Day Threat Blocking", "Machine Learning Analysis", "Browser Integration"],
+    "envVariables": ["PORT", "DATABASE_URL", "API_ENDPOINT"],
+    "technologies": [
+      {
+        "stack": "language",
+        "technologies": ["Python", "FastAPI", "JavaScript"]
+      }
+    ]
+  }
+]

@@ -13,7 +13,7 @@ const Component = ({ children }: { children: React.ReactNode }) => {
   const { setCache } = useCache();
   const fetchUser = async () => {
     setLoading(true);
-    const userData = await axios.get("/api/user");
+    const userData = await axios.get("/api/user?user=admin");
     setCache(userData.data);
     setLoading(false);
   };

@@ -21,7 +21,7 @@ const Component = ({ children }: { children: React.ReactNode }) => {
       return;
     }
     try {
-      const userData = await axios.get("/api/user");
+      const userData = await axios.get("/api/user?user=user");
       setCache(userData.data);
     } catch (error) {
       fetchUser();
